@@ -86,9 +86,133 @@
         </ul>
       </div>
     </div>
-    <a class="header__callback">Заказать звонок</a>
+    <button type="button" class="btn btn--callback">Заказать звонок</button>
   </header>
   <main class="main">
+    <section class="services">
+      <div class="services__banner">
+        <h1 class="services__title">Негабаритные перевозки по России</h1>
+        <button type="button" class="btn btn--services-request"></button>
+        <p class="services__description"></p>
+      </div>
+      <div class="services__carousel">
+        <div class="services__carousel-arrow-left"></div>
+        <ul class="services__carousel-list clear-list">
+          <li class="services__carousel-item">
+            <p class="services__carousel-title">Перевозка экскаваторов</p>
+          </li>
+          <li class="services__carousel-item">
+            <p class="services__carousel-title">Перевозка промышленных бульдозеров</p>
+          </li>
+          <li class="services__carousel-item">
+            <p class="services__carousel-title">Перевозка экскаваторов</p>
+          </li>
+        </ul>
+        <div class="services__carousel-arrow-right"></div>
+      </div>
+      <button type="button" href="#" class="btn btn--services-all">Все услуги</button>
+    </section>
+    <section class="calculate">
+      <h2 class="calculate__header">Узнать стоимость перевозок</h2>
+      <div class="calculate__wrapper">
+        <form class="calculate__form">
+          <!-- TODO -->
+          <div class="calculate__slider"></div>
+          <!-- TODO -->
+          <div class="calculate__fieldset">
+            <ul class="calculate__list clear-list">
+              <li class="calculate__item">
+                <label class="visually-hidden" for="loading_address"></label>
+                <input class="calculate__item-input" type="text" name="loading_address" id="loading_address"
+                  placeholder="Адрес загрузки">
+              </li>
+              <li class="calculate__item"></li>
+                <label class="visually-hidden" for="full_name"></label>
+                <input class="calculate__item-input" type="text" name="full_name" id="full_name"
+                  placeholder="ФИО или организация">
+              </li>
+              <li class="calculate__item"></li>
+                <label class="visually-hidden" for="unloading_address"></label>
+                <input class="calculate__item-input" type="text" name="unloading_address" id="unloading_address"
+                  placeholder="Адрес разгрузки">
+              </li>
+              <li class="calculate__item"></li>
+                <label class="visually-hidden" for="cargo_name"></label>
+                <input class="calculate__item-input" type="text" name="cargo_name" id="cargo_name"
+                  placeholder="Наименование груза">
+              </li>
+              <li class="calculate__item"></li>
+                <label class="visually-hidden" for="cargo_info"></label>
+                <input class="calculate__item-input" type="text" name="cargo_info" id="cargo_info"
+                  placeholder="Информация о грузе">
+              </li>
+            </ul>
+            <div class="calculate__form-send">
+              <div class="policy">
+                <input class="calculate__form-input visually-hidden" type="checkbox" name="policy" id="policy"
+                value="agree">
+                <label class="calculate__form-label" for="policy">Соглашаюсь с <span class="calculate__form-span">Правилами обработки персональных данных</span></label>
+              </div>
+              <button class="btn calculate__form-submit" type="submit"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="features">
+      <h2 class="visually-hidden">Преимущества</h2>
+      <ul class="features__list clear-list">
+        <li class="features__item">
+          <p class="features__text"></p>
+        </li>
+        <li class="features__item"></li>
+          <p class="features__text"></p>
+        </li>
+        <li class="features__item"></li>
+          <p class="features__text"></p>
+        </li>
+        <li class="features__item"></li>
+          <p class="features__text"></p>
+        </li>
+      </ul>
+    </section>
+    <section class="car">
+      <div class="slide">
+        <h2 class="slide__title">Наш автопарк</h2>
+        <div class="slide__controls">
+          <button type="button" class="slide__button"></button>
+          <button type="button" class="slide__button"></button>
+        </div>
+      </div>
+      <div class="car__wrapper">
+        <div class="car__image"></div>
+        <div class="car__info">
+          <p class="car__description"></p>
+          <button type="button" class="car__order"></button>
+        </div>
+      </div>
+    </section>
+    <section class="price">
+
+    </section>
+    <section class="info">
+
+    </section>
+    <section class="consultation">
+
+    </section>
+    <section class="about">
+
+    </section>
+    <section class="faq">
+
+    </section>
+    <section class="partners">
+
+    </section>
+    <section class="discuss">
+
+    </section>
 
   </main>
   <footer class="footer">
