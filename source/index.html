@@ -112,48 +112,67 @@
       </div>
       <button type="button" href="#" class="btn btn--services-all">Все услуги</button>
     </section>
-    <section class="calculate">
-      <h2 class="calculate__header">Узнать стоимость перевозок</h2>
-      <div class="calculate__wrapper">
-        <form class="calculate__form">
-          <!-- TODO -->
-          <div class="calculate__slider"></div>
-          <!-- TODO -->
-          <div class="calculate__fieldset">
-            <ul class="calculate__list clear-list">
-              <li class="calculate__item">
+    <section class="calculator">
+      <h2 class="calculator__header">Узнать стоимость перевозок</h2>
+      <div class="calculator__wrapper">
+        <form class="calculator__form">
+          <div class="range calculator__range">
+            <div class="range__wrapper">
+              <p class="range__value">Ширина в метрах</p>
+              <input class="range__input" type="range" name="width" min="0" max="10" step="0.1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+            <div class="range__wrapper">
+              <p class="range__value">Высота в метрах</p>
+              <input class="range__input" type="range" name="width" min="0" max="10" step="0.1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+            <div class="range__wrapper">
+              <p class="range__value">Длина в метрах</p>
+              <input class="range__input" type="range" name="width" min="0" max="50" step="0.1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+            <div class="range__wrapper">
+              <p class="range__value">Вес в тоннах</p>
+              <input class="range__input" type="range" name="width" min="0" max="200" step="1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+          </div>
+          <div class="calculator__fieldset">
+            <ul class="calculator__list clear-list">
+              <li class="calculator__item">
                 <label class="visually-hidden" for="loading_address"></label>
-                <input class="calculate__item-input" type="text" name="loading_address" id="loading_address"
+                <input class="calculator__item-input" type="text" name="loading_address" id="loading_address"
                   placeholder="Адрес загрузки">
               </li>
-              <li class="calculate__item"></li>
+              <li class="calculator__item"></li>
                 <label class="visually-hidden" for="full_name"></label>
-                <input class="calculate__item-input" type="text" name="full_name" id="full_name"
+                <input class="calculator__item-input" type="text" name="full_name" id="full_name"
                   placeholder="ФИО или организация">
               </li>
-              <li class="calculate__item"></li>
+              <li class="calculator__item"></li>
                 <label class="visually-hidden" for="unloading_address"></label>
-                <input class="calculate__item-input" type="text" name="unloading_address" id="unloading_address"
+                <input class="calculator__item-input" type="text" name="unloading_address" id="unloading_address"
                   placeholder="Адрес разгрузки">
               </li>
-              <li class="calculate__item"></li>
+              <li class="calculator__item"></li>
                 <label class="visually-hidden" for="cargo_name"></label>
-                <input class="calculate__item-input" type="text" name="cargo_name" id="cargo_name"
+                <input class="calculator__item-input" type="text" name="cargo_name" id="cargo_name"
                   placeholder="Наименование груза">
               </li>
-              <li class="calculate__item"></li>
+              <li class="calculator__item"></li>
                 <label class="visually-hidden" for="cargo_info"></label>
-                <input class="calculate__item-input" type="text" name="cargo_info" id="cargo_info"
+                <input class="calculator__item-input" type="text" name="cargo_info" id="cargo_info"
                   placeholder="Информация о грузе">
               </li>
             </ul>
-            <div class="calculate__form-send">
+            <div class="calculator__form-send">
               <div class="policy">
-                <input class="calculate__form-input visually-hidden" type="checkbox" name="policy" id="policy"
+                <input class="policy__input visually-hidden" type="checkbox" name="policy" id="policy"
                 value="agree">
-                <label class="calculate__form-label" for="policy">Соглашаюсь с <span class="calculate__form-span">Правилами обработки персональных данных</span></label>
+                <label class="policy__label" for="policy">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
               </div>
-              <button class="btn calculate__form-submit" type="submit"></button>
+              <button class="btn calculator__form-submit" type="submit"></button>
             </div>
           </div>
         </form>
@@ -185,7 +204,9 @@
         </div>
       </div>
       <div class="car__wrapper">
-        <div class="car__image"></div>
+        <div class="car__image">
+          <img class="car__img" src="" alt="Faymonville">
+        </div>
         <div class="car__info">
           <p class="car__description"></p>
           <button type="button" class="car__order"></button>
@@ -193,13 +214,78 @@
       </div>
     </section>
     <section class="price">
-
+      <h2 class="price__title">Стоимость перевозок</h2>
+      <div class="price__wrapper">
+        <div class="price__item">
+          <div class="price__item-header">До 20 тонн</div>
+          <div class="price__item-body">
+            <h3 class="price__item-location">Москва</h3>
+            <div class="price__item-info">
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+            </div>
+          </div>
+        </div>
+        <div class="price__item">
+          <div class="price__item-header">До 20 тонн</div>
+          <div class="price__item-body">
+            <h3 class="price__item-location">Ростов-на-Дону</h3>
+            <div class="price__item-info">
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+            </div>
+          </div>
+        </div>
+        <div class="price__item">
+          <div class="price__item-header">До 20 тонн</div>
+          <div class="price__item-body">
+            <h3 class="price__item-location">Регионы РФ</h3>
+            <div class="price__item-info">
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+              <p class="price__item-value">От 23 ооо руб</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="info">
-
+    <section class="oversized">
+      <div class="oversized__info">
+        <h2 class="oversized__title">Негабаритные перевозки</h2>
+        <p class="oversized__text">Негабаритный груз – это груз, чьи габариты и размеры выше допустимых
+          норм ПДД, поэтому перевозки обычным транспортом этих позиций
+          невозможны. Для транспортировки подобных грузов применяют
+          негабаритные перевозки автомобильным транспортом.</p>
+        <h3 class="oversized__subtitle">Организация перевозки</h3>
+        <p class="oversized__text">В нашем автопарке представлены необходимые для таких перевозок
+          автомобили, среди которых тягачи с различной грузоподъемностью,
+          например, седельный тягач Scania с грузоподъемностью от 40 тыс. кг до
+          150 тыс. кг и др. Мы предлагаем выполнить перевозки негабаритного
+          груза автомобильным транспортом в Мурманск, Удачный, Магадан</p>
+        <h3 class="oversized__subtitle">Подзаголовок</h3>
+        <p class="oversized__text">В нашем автопарке представлены необходимые для таких перевозок
+          автомобили, среди которых тягачи с различной грузоподъемностью,
+          например, седельный тягач Scania с грузоподъемностью от 40 тыс. кг до 150 тыс. кг и др. Мы предлагаем выполнить перевозки негабаритного
+          груза автомобильным транспортом в Мурманск, Удачный, Магадан и т. д.</p>
+      </div>
+      <div class="oversized__image">
+        <img class="oversized__img" src="" alt="Picture">
+      </div>
     </section>
     <section class="consultation">
-
+      <h2 class="consultation__title"></h2>
+      <form class="consultation__form">
+        <label class="visually-hidden" for="phone"></label>
+        <input class="consultation__input" type="tel" name="phone" id="phone"
+          placeholder="Телефон*">
+      </form>
+      <div class="policy">
+        <input class="policy__input visually-hidden" type="checkbox" name="policy" id="policy"
+        value="agree">
+        <label class="policy__label" for="policy">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+      </div>
     </section>
     <section class="about">
 
