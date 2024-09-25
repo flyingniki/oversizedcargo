@@ -16,7 +16,7 @@
 </head>
 <body class="page__body">
   <header class="header">
-    <a href="index.html" class="header__logo"></a>
+    <a href="index.html" class="header__logo">
       <picture>
         <img class="header__logo-img" src="" alt="Логотип" width=""
           height="">
@@ -80,19 +80,19 @@
       <a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
       <div class="header__icons">
         <ul class="header__icons-list clear-list">
-          <li class="header__icons-item"></li>
-          <li class="header__icons-item"></li>
-          <li class="header__icons-item"></li>
+          <li class="header__icons-item header__icons-item--phone"></li>
+          <li class="header__icons-item header__icons-item--telegram"></li>
+          <li class="header__icons-item header__icons-item--whatsapp"></li>
         </ul>
       </div>
     </div>
-    <button type="button" class="btn btn--callback">Заказать звонок</button>
+    <button type="button" class="btn header__btn btn--callback">Заказать звонок</button>
   </header>
   <main class="main">
     <section class="services">
       <div class="services__banner">
         <h1 class="services__title">Негабаритные перевозки по России</h1>
-        <button type="button" class="btn btn--services-request"></button>
+        <button type="button" class="btn services__btn btn--services-request"></button>
         <p class="services__description"></p>
       </div>
       <div class="services__carousel">
@@ -110,12 +110,12 @@
         </ul>
         <div class="services__carousel-arrow-right"></div>
       </div>
-      <button type="button" href="#" class="btn btn--services-all">Все услуги</button>
+      <button type="button" class="btn services__btn btn--services-all">Все услуги</button>
     </section>
     <section class="calculator">
       <h2 class="calculator__header">Узнать стоимость перевозок</h2>
       <div class="calculator__wrapper">
-        <form class="calculator__form">
+        <form class="calculator__form" action="#" method="post">
           <div class="range calculator__range">
             <div class="range__wrapper">
               <p class="range__value">Ширина в метрах</p>
@@ -124,17 +124,17 @@
             </div>
             <div class="range__wrapper">
               <p class="range__value">Высота в метрах</p>
-              <input class="range__input" type="range" name="width" min="0" max="10" step="0.1" value="0">
+              <input class="range__input" type="range" name="height" min="0" max="10" step="0.1" value="0">
               <output class="range__bubble"></output>
             </div>
             <div class="range__wrapper">
               <p class="range__value">Длина в метрах</p>
-              <input class="range__input" type="range" name="width" min="0" max="50" step="0.1" value="0">
+              <input class="range__input" type="range" name="length" min="0" max="50" step="0.1" value="0">
               <output class="range__bubble"></output>
             </div>
             <div class="range__wrapper">
               <p class="range__value">Вес в тоннах</p>
-              <input class="range__input" type="range" name="width" min="0" max="200" step="1" value="0">
+              <input class="range__input" type="range" name="weight" min="0" max="200" step="1" value="0">
               <output class="range__bubble"></output>
             </div>
           </div>
@@ -145,34 +145,34 @@
                 <input class="calculator__item-input" type="text" name="loading_address" id="loading_address"
                   placeholder="Адрес загрузки">
               </li>
-              <li class="calculator__item"></li>
+              <li class="calculator__item">
                 <label class="visually-hidden" for="full_name"></label>
                 <input class="calculator__item-input" type="text" name="full_name" id="full_name"
                   placeholder="ФИО или организация">
               </li>
-              <li class="calculator__item"></li>
+              <li class="calculator__item">
                 <label class="visually-hidden" for="unloading_address"></label>
                 <input class="calculator__item-input" type="text" name="unloading_address" id="unloading_address"
                   placeholder="Адрес разгрузки">
               </li>
-              <li class="calculator__item"></li>
+              <li class="calculator__item">
                 <label class="visually-hidden" for="cargo_name"></label>
                 <input class="calculator__item-input" type="text" name="cargo_name" id="cargo_name"
                   placeholder="Наименование груза">
               </li>
-              <li class="calculator__item"></li>
+              <li class="calculator__item">
                 <label class="visually-hidden" for="cargo_info"></label>
                 <input class="calculator__item-input" type="text" name="cargo_info" id="cargo_info"
                   placeholder="Информация о грузе">
               </li>
             </ul>
-            <div class="calculator__form-send">
-              <div class="policy">
-                <input class="policy__input visually-hidden" type="checkbox" name="policy" id="policy"
+            <div class="calculator__send">
+              <div class="policy calculator__policy">
+                <input class="policy__input visually-hidden" type="checkbox" name="policy_calc" id="policy_calc"
                 value="agree">
-                <label class="policy__label" for="policy">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+                <label class="policy__label" for="policy_calc">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
               </div>
-              <button class="btn calculator__form-submit" type="submit"></button>
+              <button class="btn calculator__submit" type="submit"></button>
             </div>
           </div>
         </form>
@@ -184,23 +184,23 @@
         <li class="features__item">
           <p class="features__text"></p>
         </li>
-        <li class="features__item"></li>
+        <li class="features__item">
           <p class="features__text"></p>
         </li>
-        <li class="features__item"></li>
+        <li class="features__item">
           <p class="features__text"></p>
         </li>
-        <li class="features__item"></li>
+        <li class="features__item">
           <p class="features__text"></p>
         </li>
       </ul>
     </section>
     <section class="car">
-      <div class="slide">
-        <h2 class="slide__title">Наш автопарк</h2>
-        <div class="slide__controls">
-          <button type="button" class="slide__button"></button>
-          <button type="button" class="slide__button"></button>
+      <div class="slider-header car__slider">
+        <h2 class="slider-header__title">Наш автопарк</h2>
+        <div class="slider-header__controls">
+          <button type="button" class="slider-header__button"></button>
+          <button type="button" class="slider-header__button"></button>
         </div>
       </div>
       <div class="car__wrapper">
@@ -275,34 +275,221 @@
       </div>
     </section>
     <section class="consultation">
-      <h2 class="consultation__title"></h2>
-      <form class="consultation__form">
-        <label class="visually-hidden" for="phone"></label>
-        <input class="consultation__input" type="tel" name="phone" id="phone"
+      <h2 class="consultation__title">Нужна консультация специалиста?</h2>
+      <form class="consultation__form" action="#" method="post">
+        <label class="visually-hidden" for="phone_consult"></label>
+        <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
           placeholder="Телефон*">
+        <button class="btn consultation__submit" type="submit"></button>
       </form>
       <div class="policy">
-        <input class="policy__input visually-hidden" type="checkbox" name="policy" id="policy"
+        <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
         value="agree">
-        <label class="policy__label" for="policy">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+        <label class="policy__label" for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
       </div>
     </section>
     <section class="about">
-
+      <h2 class="about__title">Как мы работаем</h2>
+      <div class="swiper about__carousel">
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">1</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 1</h3>
+            <p class="swiper__text">Предварительная консультация, расчет стоимости перевозки</p>
+          </div>
+        </div>
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">2</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 2</h3>
+            <p class="swiper__text">Заключение официального договора, направление счета для внесения предоплаты</p>
+          </div>
+        </div>
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">3</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 3</h3>
+            <p class="swiper__text">Получение разрешения на транспортировку негабарита, согласование маршрута движения с ГИБДД</p>
+          </div>
+        </div>
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">4</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 4</h3>
+            <p class="swiper__text">Подача транспорта под погрузку</p>
+          </div>
+        </div>
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">5</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 5</h3>
+            <p class="swiper__text">Доставка груза в оговоренные сроки</p>
+          </div>
+        </div>
+        <div class="swiper__slide">
+          <div class="swiper__line"></div>
+          <div class="swiper__bubble">
+            <span class="swiper__span">6</span>
+          </div>
+          <div class="swiper__box">
+            <h3 class="swiper__title">Шаг 6</h3>
+            <p class="swiper__text">Направление полного пакета сканов оригиналов закрывающих документов</p>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="faq">
-
+      <h2 class="faq__title">Частые вопросы</h2>
+      <div class="faq__wrapper">
+        <div class="faq__item">
+          <button class="faq__button">Что представляет собой перевозка негабарита?</button>
+          <p class="faq__content"></p>
+        </div>
+        <div class="faq__item">
+          <button class="faq__button">Доставка груза в оговоренные сроки</button>
+          <p class="faq__content"></p>
+        </div>
+        <div class="faq__item">
+          <button class="faq__button">Подача транспорта под погрузку</button>
+          <p class="faq__content faq__content--active">Получение разрешения на транспортировку негабарита, согласование маршрута движения с ГИБДД. Направление полного пакета сканов оригиналов закрывающих документов</p>
+        </div>
+      </div>
     </section>
     <section class="partners">
-
+      <div class="slider-header partners__slider">
+        <h2 class="slider-header__title">Наши партнеры</h2>
+        <div class="slider-header__controls">
+          <button type="button" class="slider-header__button"></button>
+          <button type="button" class="slider-header__button"></button>
+        </div>
+      </div>
+      <ul class="partners__list clear-list">
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="" class="partners__img" width="" height="" alt="">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="" class="partners__img" width="" height="" alt="">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="" class="partners__img" width="" height="" alt="">
+          </a>
+        </li>
+        <li class="partners__item">
+          <a href="#" class="partners__link">
+            <img src="" class="partners__img" width="" height="" alt="">
+          </a>
+        </li>
+      </ul>
     </section>
     <section class="discuss">
-
+      <h2 class="discuss__title">Остались вопросы? Давайте обсудим!</h2>
+      <form class="discuss__form" action="#" method="post">
+        <div class="discuss__fields">
+          <label class="visually-hidden" for="phone_discuss"></label>
+          <input class="discuss__input" type="tel" name="phone_discuss" id="phone_discuss"
+            placeholder="Телефон*">
+          <label class="visually-hidden" for="name"></label>
+          <input class="discuss__input" type="text" name="name" id="name"
+            placeholder="Имя">
+        </div>
+        <div class="policy discuss__policy">
+          <input class="policy__input visually-hidden" type="checkbox" name="policy_discuss" id="policy_discuss"
+          value="agree">
+          <label class="policy__label" for="policy_discuss">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+          <button class="btn discuss__submit" type="submit"></button>
+        </div>
+      </form>
     </section>
-
   </main>
   <footer class="footer">
-
+    <div class="footer__nav">
+      <div class="footer__menu">
+        <h2 class="footer__title">Меню</h2>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link">Услуги</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Автопарк</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">О нас</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Проекты</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__menu">
+        <h2 class="footer__title">Услуги</h2>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Перевозка экскаваторов</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Перевозка сборных грузов грузов</a>
+          </li>
+          <li class="footer__item">
+            <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__contacts">
+      <div class="footer__col">
+        <a href="tel:+79778731886" class="footer__phone">+7 (977) 873-18-86</a>
+        <a href="tel:+79778731886" class="footer__phone">+7 (977) 873-18-86</a>
+        <button type="button" class="btn footer__btn btn--callback">Заказать звонок</button>
+        <div class="footer__mail">
+          <a class="footer__mail-link" href="mailto:infoinfo@gmail.com">
+            <img class="footer__mail-svg" src="" alt="">
+            <span class="footer__mail-span">infoinfo@gmail.com</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <div class="footer__office">
+          <p class="footer__text"></p>
+          <p class="footer__text"></p>
+        </div>
+        <div class="footer__social">
+          <p class="footer__text"></p>
+          <div class="footer__social-icons">
+            <img class="footer__social-img" src="" alt="">
+            <img class="footer__social-img" src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
