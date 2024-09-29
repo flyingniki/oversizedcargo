@@ -1,0 +1,97 @@
+.nav
+  position: relative
+
+  &__toggle
+    display: block
+    width: 32px
+    height: 32px
+    cursor: pointer
+    border: none
+
+    @media (min-width: $desktop)
+      display: none
+
+  &--closed
+    order: 2
+
+  &__list
+    @media (max-width: $mobile-only)
+      border: 1px solid $white
+      position: absolute
+      right: 0
+      min-width: $mobile
+      height: 500px
+      background-color: $brown-olive
+      z-index: 1
+      border-radius: 0 0 12px 12px
+
+    @media (min-width: $desktop)
+      display: flex
+      column-gap: 16px
+
+  &__item
+    // & .nav__submenu
+    //   display: none
+
+    // &--active .nav__submenu
+    //   display: block
+
+    @media (max-width: $mobile-only)
+      border-bottom: 1px solid $white
+      height: 50px
+
+  &__link
+    display: block
+    text-decoration: none
+    color: $white
+    padding: 16px
+    font-size: 14px
+    font-weight: 600
+    line-height: 130%
+
+    @media (min-width: $desktop)
+      font-size: 16px
+      padding: 0
+
+  &__submenu
+    border: 1px solid red
+    background-color: $brown-olive
+
+    &-item
+      // & .nav__submenu
+      //   display: none
+
+      // &--active .nav__submenu
+      //   display: block
+
+      @media (max-width: $mobile-only)
+        border-bottom: 1px solid $white
+        height: 50px
+
+    &-link
+      display: block
+      text-decoration: none
+      color: $white
+      padding: 16px
+      font-size: 14px
+      font-weight: 600
+      line-height: 130%
+
+  @media (min-width: $desktop)
+    position: absolute
+    left: 177px
+    display: flex
+    column-gap: 16px
+
+.nav--closed .nav__toggle
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background-image: url('../../img/template/burger.svg')
+  background-repeat: no-repeat
+  background-position: center
+
+.nav--closed .nav__list
+
+  @media (max-width: $mobile-only)
+    display: none
