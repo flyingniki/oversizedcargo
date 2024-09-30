@@ -2,25 +2,31 @@
   position: relative
 
   &__toggle
-    display: block
-    width: 32px
-    height: 32px
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    background-image: url('../../img/template/burger.svg')
+    background-repeat: no-repeat
+    background-position: center
     cursor: pointer
     border: none
 
     @media (min-width: $desktop)
       display: none
 
-  &--closed
-    order: 2
+  // &--closed
+  //   order: 2
+
+  // &__container
+  //   position: absolute
 
   &__list
     @media (max-width: $mobile-only)
       border: 1px solid $white
       position: absolute
-      right: 0
+      top: 46px
+      right: -12px
       min-width: $mobile
-      height: 500px
       background-color: $brown-olive
       z-index: 1
       border-radius: 0 0 12px 12px
@@ -30,15 +36,12 @@
       column-gap: 16px
 
   &__item
-    // & .nav__submenu
-    //   display: none
-
-    // &--active .nav__submenu
-    //   display: block
 
     @media (max-width: $mobile-only)
-      border-bottom: 1px solid $white
       height: 50px
+
+      &:not(:last-child)
+        border-bottom: 1px solid $white
 
   &__link
     display: block
@@ -54,15 +57,12 @@
       padding: 0
 
   &__submenu
+    // position: absolute
     border: 1px solid red
     background-color: $brown-olive
+    // min-width: $mobile
 
     &-item
-      // & .nav__submenu
-      //   display: none
-
-      // &--active .nav__submenu
-      //   display: block
 
       @media (max-width: $mobile-only)
         border-bottom: 1px solid $white
@@ -82,14 +82,6 @@
     left: 177px
     display: flex
     column-gap: 16px
-
-.nav--closed .nav__toggle
-  width: 30px
-  height: 30px
-  border-radius: 50%
-  background-image: url('../../img/template/burger.svg')
-  background-repeat: no-repeat
-  background-position: center
 
 .nav--closed .nav__list
 
