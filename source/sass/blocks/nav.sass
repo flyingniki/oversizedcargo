@@ -14,12 +14,6 @@
     @media (min-width: $desktop)
       display: none
 
-  // &--closed
-  //   order: 2
-
-  // &__container
-  //   position: absolute
-
   &__list
     @media (max-width: $mobile-only)
       border: 1px solid $white
@@ -36,11 +30,12 @@
       column-gap: 16px
 
   &__item
+    &--subitem
+      @media (max-width: $mobile-only)
+        border-bottom: 1px solid $white
 
-    @media (max-width: $mobile-only)
-      height: 50px
-
-      &:not(:last-child)
+    &:not(:last-child)
+      @media (max-width: $mobile-only)
         border-bottom: 1px solid $white
 
   &__link
@@ -52,30 +47,35 @@
     font-weight: 600
     line-height: 130%
 
+    // &--accordion
+    //   &::after
+    //     position: absolute
+    //     top: 23px
+    //     right: 16px
+    //     width: 11px
+    //     height: 11px
+    //     content: ""
+    //     background-image: url("../../img/template/arrow-right.svg")
+    //     background-repeat: no-repeat
+    //     transition: transform .2s ease-in-out
+
+    // &--active
+    //   background-color: red
+
+    //   &::after
+    //     position: absolute
+    //     top: 23px
+    //     right: 16px
+    //     display: block
+    //     content: ''
+    //     background-image: url('../../img/template/arrow-down.svg')
+    //     width: 11px
+    //     height: 11px
+
     @media (min-width: $desktop)
       font-size: 16px
       padding: 0
-
-  &__submenu
-    // position: absolute
-    border: 1px solid red
-    background-color: $brown-olive
-    // min-width: $mobile
-
-    &-item
-
-      @media (max-width: $mobile-only)
-        border-bottom: 1px solid $white
-        height: 50px
-
-    &-link
-      display: block
-      text-decoration: none
-      color: $white
-      padding: 16px
-      font-size: 14px
-      font-weight: 600
-      line-height: 130%
+      border: none
 
   @media (min-width: $desktop)
     position: absolute

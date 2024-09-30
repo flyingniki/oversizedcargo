@@ -78,57 +78,57 @@
       <!-- switch menu modificator to nav--closed -->
       <nav class="nav">
       <!-- switch menu modificator to nav--closed -->
-        <ul class="nav__list clear-list">
-          <li class="nav__item nav__item--active">
-            <a href="#" class="nav__link">Услуги</a>
-            <ul class="nav__submenu clear-list visually-hidden">
-              <li class="nav__submenu-item">
-                <a href="#" class="nav__submenu-link">Аренда тралов</a>
-              </li>
-              <li class="nav__submenu-item">
-                <a href="#" class="nav__submenu-link">Перевозка спецтехники</a>
-              </li>
-              <li class="nav__submenu-item">
-                <a href="#" class="nav__submenu-link">Перевозка техники</a>
-              </li>
-              <li class="nav__submenu-item nav__submenu-item--active">
-                <a href="#" class="nav__submenu-link">Перевозка промышленного оборудования</a>
-                <ul class="nav__submenu clear-list visually-hidden">
-                  <li class="nav__submenu-item">
-                    <a href="#" class="nav__submenu-link">Экскаваторы</a>
-                  </li>
-                  <li class="nav__submenu-item">
-                    <a href="#" class="nav__submenu-link">Бульдозеры</a>
-                  </li>
-                  <li class="nav__submenu-item">
-                    <a href="#" class="nav__submenu-link">Погрузчики</a>
-                  </li>
-                  <li class="nav__submenu-item">
-                    <a href="#" class="nav__submenu-link">Грейдеры</a>
-                  </li>
-                  <li class="nav__submenu-item">
-                    <a href="#" class="nav__submenu-link">Автокраны</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav__submenu-item">
-                <a href="#" class="nav__submenu-link">Проектные перевозки грузов</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav__item">
+        <div class="nav__list">
+          <div class="nav__item">
+            <a href="#" class="nav__link nav__link--accordion">Услуги</a>
+          </div>
+          <div class="nav__submenu clear-list visually-hidden">
+            <div class="nav__item">
+              <a href="#" class="nav__link">Аренда тралов</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Перевозка спецтехники</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Перевозка техники</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link nav__link--accordion">Перевозка промышленного оборудования</a>
+            </div>
+            <div class="nav__submenu clear-list visually-hidden">
+              <div class="nav__item">
+                <a href="#" class="nav__link">Экскаваторы</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Бульдозеры</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Погрузчики</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Грейдеры</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Автокраны</a>
+              </div>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Проектные перевозки грузов</a>
+            </div>
+          </div>
+          <div class="nav__item">
             <a href="#" class="nav__link">Автопарк</a>
-          </li>
-          <li class="nav__item">
+          </div>
+          <div class="nav__item">
             <a href="#" class="nav__link">О нас</a>
-          </li>
-          <li class="nav__item">
+          </div>
+          <div class="nav__item">
             <a href="#" class="nav__link">Проекты</a>
-          </li>
-          <li class="nav__item">
+          </div>
+          <div class="nav__item">
             <a href="#" class="nav__link">Контакты</a>
-          </li>
-        </ul>
+          </div>
+        </div>
         <button class="btn nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
       </nav>
       <div class="header__contacts">
@@ -472,12 +472,12 @@
           <div class="slider-header__controls">
             <button type="button" class="btn slider-header__button">
               <svg class="slider-header__svg">
-                <use xlink:href="#arrow-left--inline"></use>
+                <use xlink:href="#control-left--inline"></use>
               </svg>
             </button>
             <button type="button" class="btn slider-header__button">
               <svg class="slider-header__svg">
-                <use xlink:href="#arrow-right--inline"></use>
+                <use xlink:href="#control-right--inline"></use>
               </svg>
             </button>
           </div>
