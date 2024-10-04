@@ -1,5 +1,5 @@
 {
-  "name": "sedona",
+  "name": "oversizedcargo",
   "private": true,
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
@@ -47,7 +47,7 @@
     "node": "14.15.0"
   },
   "dependencies": {
-    "jquery": "^3.7.1",
+    "bootstrap": "^5.3.3",
     "swiper": "^11.1.14"
   }
 }

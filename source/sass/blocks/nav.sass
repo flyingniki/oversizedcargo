@@ -5,7 +5,7 @@
     width: 30px
     height: 30px
     border-radius: 50%
-    background-image: url('../../img/template/burger.svg')
+    background-image: url('../../img/icons/burger.svg')
     background-repeat: no-repeat
     background-position: center
     cursor: pointer
@@ -16,27 +16,26 @@
 
   &__list
     @media (max-width: $mobile-only)
-      border: 1px solid $white
       position: absolute
-      top: 46px
+      top: 47px
       right: -12px
       min-width: $mobile
-      background-color: $brown-olive
+      background-color: $bg-black
       z-index: 1
-      border-radius: 0 0 12px 12px
+      border-radius: 12px
 
     @media (min-width: $desktop)
+      position: relative
       display: flex
       column-gap: 16px
 
   &__item
-    &--subitem
-      @media (max-width: $mobile-only)
-        border-bottom: 1px solid $white
+    @media (max-width: $mobile-only)
+      border-bottom: 1px solid $disabled-field
 
-    &:not(:last-child)
-      @media (max-width: $mobile-only)
-        border-bottom: 1px solid $white
+    @media (min-width: $desktop)
+      &:first-child
+        margin-right: 15px
 
   &__link
     display: block
@@ -47,35 +46,73 @@
     font-weight: 600
     line-height: 130%
 
-    // &--accordion
-    //   &::after
-    //     position: absolute
-    //     top: 23px
-    //     right: 16px
-    //     width: 11px
-    //     height: 11px
-    //     content: ""
-    //     background-image: url("../../img/template/arrow-right.svg")
-    //     background-repeat: no-repeat
-    //     transition: transform .2s ease-in-out
+    &--accordion
+      position: relative
 
-    // &--active
-    //   background-color: red
+      &::after
+        position: absolute
+        top: 20px
+        right: 16px
+        width: 11px
+        height: 11px
+        content: ""
+        background-image: url("../../img/icons/arrow-right.svg")
+        background-repeat: no-repeat
 
-    //   &::after
-    //     position: absolute
-    //     top: 23px
-    //     right: 16px
-    //     display: block
-    //     content: ''
-    //     background-image: url('../../img/template/arrow-down.svg')
-    //     width: 11px
-    //     height: 11px
+        @media (min-width: $desktop)
+          top: 8px
+          right: -15px
+          background-image: url('../../img/icons/arrow-down.svg')
+
+    &--active
+      @media (max-width: $mobile-only)
+        &::after
+          position: absolute
+          top: 20px
+          right: 16px
+          display: block
+          content: ''
+          background-image: url('../../img/icons/arrow-down.svg')
+          width: 11px
+          height: 11px
 
     @media (min-width: $desktop)
       font-size: 16px
       padding: 0
       border: none
+
+  &__submenu
+    @media (max-width: $mobile-only)
+      & .nav__link
+        font-weight: 400
+        padding-left: 32px
+
+      &--sub
+        & .nav__link
+          padding-left: 48px
+
+    @media (min-width: $desktop)
+      position: absolute
+      border: 1px solid $stroke
+      border-radius: 16px
+      min-width: 345px
+      top: 40px
+      background-color: $bg-black
+
+      &--sub
+        top: 126px
+        right: -347px
+
+      & .nav__link
+        font-size: 14px
+        font-weight: 400
+        padding: 12px 16px
+
+        &--accordion
+          &::after
+            top: 16px
+            right: 8px
+            background-image: url('../../img/icons/arrow-right.svg')
 
   @media (min-width: $desktop)
     position: absolute
@@ -84,6 +121,5 @@
     column-gap: 16px
 
 .nav--closed .nav__list
-
   @media (max-width: $mobile-only)
     display: none

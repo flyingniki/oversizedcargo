@@ -1,0 +1,115 @@
+.services
+  &__banner
+    box-sizing: border-box
+    padding: 213px 55px 16px 16px
+    height: 398px
+    background-image: url('../../img/index/truck-desktop@1x.png')
+    background-repeat: no-repeat
+    background-size: cover
+    margin-bottom: 40px
+
+    @media (max-width: $mobile-only)
+      background-position-x: 60%
+
+    @media (min-width: $desktop)
+      padding: 94px 48px 48px
+      height: 426px
+      margin-bottom: 80px
+
+  &__title
+    margin: 0
+    margin-bottom: 8px
+    font-size: 22px
+    font-weight: 500
+    line-height: 135%
+
+    @media (min-width: $desktop)
+      font-size: 40px
+      margin-bottom: 24px
+
+  &__btn
+    padding: 12px 23px
+    margin-bottom: 8px
+    font-size: 16px
+
+    &--request
+      background-color: $orange
+
+      @media (min-width: $desktop)
+        margin-bottom: 24px
+
+    &--all
+      width: 100%
+      background-color: $blue
+      margin: 0
+
+    @media (min-width: $desktop)
+      font-size: 20px
+
+  &__description
+    margin: 0
+    font-size: 14px
+    font-weight: 500
+
+    @media (min-width: $desktop)
+      font-size: 20px
+      font-weight: 400
+
+  &__carousel
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      margin-bottom: 24px
+
+    &-item
+      height: 115px
+      background-color: $brown-olive
+      border-radius: 12px
+      box-sizing: border-box
+      padding: 16px
+      padding-right: 96px
+
+      @media (min-width: $desktop)
+        height: 173px
+        border-radius: 16px
+        padding: 25px
+        padding-right: 50px
+
+    &-title
+      margin: 0
+      font-weight: 500
+
+      @media (min-width: $desktop)
+        font-size: 18px
+
+    & .slick
+      &-arrow
+        @media (min-width: $desktop)
+          position: absolute
+          z-index: 1
+          border: none
+          background-repeat: no-repeat
+          background-color: transparent
+          width: 16px
+          height: 16px
+
+        @media (max-width: $mobile-only)
+          display: none !important
+
+      &-next
+        bottom: 71px,
+        right: 0,
+        background-image: url('../img/icons/arrow-right-control.svg')
+
+      &-prev
+        top: 86px,
+        left: 8px,
+        background-image: url('../img/icons/arrow-left-control.svg')
+
+      &-slide
+        width: 252px
+        margin-right: 20px
+
+        @media (min-width: $desktop)
+          width: 378px
+          margin-right: 24px
