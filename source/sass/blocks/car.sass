@@ -1,0 +1,46 @@
+.car
+  &__wrapper
+    @media (min-width: $desktop)
+      display: flex
+
+  &__title
+    margin: 0
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      font-size: 32px
+      margin-bottom: 37px
+
+  &__image
+    @media (min-width: $desktop)
+      margin-right: 20px
+
+  &__img
+    @media (max-width: $mobile-only)
+      width: 100%
+
+  &__description
+    margin: 0
+    max-width: 244px
+
+    @media (max-width: $mobile-only)
+      font-size: 14px
+      margin-bottom: 25px
+
+  &__order
+    padding: 12px 23px
+    margin-bottom: 8px
+    font-size: 16px
+    width: 100%
+    background-color: $orange
+    color: $black-brown
+
+    @media (min-width: $desktop)
+      position: absolute
+      bottom: 0
+
+  &__info
+    position: relative
+    width: 100%

@@ -1,0 +1,59 @@
+.calculator
+  padding: 16px
+  box-sizing: border-box
+  background-color: $brown-olive
+  border-radius: 12px
+  margin-bottom: 32px
+
+  &__header
+    margin: 0
+    margin-bottom: 23px
+    font-size: 20px
+    font-weight: 600
+
+    @media (min-width: $desktop)
+      font-size: 32px
+      margin-bottom: 20px
+
+  &__form
+    @media (min-width: $desktop)
+      display: flex
+      justify-content: space-between
+      column-gap: 63px
+
+  &__fieldsbox
+    @media (min-width: $desktop)
+      width: 100%
+      padding: 68px 0 124px
+
+  &__fieldset
+    @media (max-width: $mobile-only)
+      display: none
+
+  &__send
+    margin-top: 43px
+
+    @media (min-width: $desktop)
+      margin-top: 16px
+      display: flex
+      justify-content: space-between
+
+  &__policy
+    @media (max-width: $mobile-only)
+      display: none
+
+  &__submit
+    padding: 13px
+    width: 100%
+    background-color: $orange
+    font-weight: 600
+    line-height: 130%
+
+    @media (min-width: $desktop)
+      width: 394px
+
+  @media (min-width: $desktop)
+    width: 1280px
+    padding: 25px
+    border-radius: 20px
+    margin-bottom: 80px

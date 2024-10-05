@@ -1,0 +1,32 @@
+.policy
+  &__label
+    display: block
+    position: relative
+    text-transform: none
+    cursor: pointer
+    user-select: none
+    margin-left: 24px
+
+    &::before
+      position: absolute
+      content: ""
+      width: 16px
+      height: 16px
+      top: 0
+      left: -24px
+      background-image: url('../../img/icons/checkbox.svg')
+      background-repeat: no-repeat
+
+  &__input:checked
+    & + .policy__label::after
+      position: absolute
+      content: ""
+      background-image: url('../../img/icons/tick.svg')
+      background-repeat: no-repeat
+      width: 10px
+      height: 7px
+      top: 4px
+      left: -21px
+
+  &__span
+    color: $orange

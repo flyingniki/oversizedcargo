@@ -1,4 +1,6 @@
 .services
+  margin-bottom: 32px
+
   &__banner
     box-sizing: border-box
     padding: 213px 55px 16px 16px
@@ -6,6 +8,7 @@
     background-image: url('../../img/index/truck-desktop@1x.png')
     background-repeat: no-repeat
     background-size: cover
+    border-radius: 12px
     margin-bottom: 40px
 
     @media (max-width: $mobile-only)
@@ -15,6 +18,7 @@
       padding: 94px 48px 48px
       height: 426px
       margin-bottom: 80px
+      border-radius: 16px
 
   &__title
     margin: 0
@@ -34,6 +38,7 @@
 
     &--request
       background-color: $orange
+      color: $black-brown
 
       @media (min-width: $desktop)
         margin-bottom: 24px
@@ -41,6 +46,7 @@
     &--all
       width: 100%
       background-color: $blue
+      color: $white
       margin: 0
 
     @media (min-width: $desktop)
@@ -113,3 +119,6 @@
         @media (min-width: $desktop)
           width: 378px
           margin-right: 24px
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px

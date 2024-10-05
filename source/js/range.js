@@ -7,6 +7,16 @@ allWrappers.forEach((wrapper) => {
     setBubble(range, bubble);
   });
   setBubble(range, bubble);
+
+  range.addEventListener("input", () => {
+    const value = ((range.value - range.min) / (range.max - range.min)) * 100;
+    range.style.background =
+      "linear-gradient(to right, #F39A17 " +
+      value +
+      "%, #787878 " +
+      value +
+      "%)";
+  });
 });
 
 function setBubble(range, bubble) {
@@ -17,7 +27,6 @@ function setBubble(range, bubble) {
   bubble.innerHTML = value;
   bubble.style.left = `calc(${newValue}% + (${8 - newValue * 0.15}px))`;
 }
-
 // document.addEventListener("DOMContentLoaded", function () {
 //   var form = document.getElementById("formslider");
 //   form.addEventListener("submit", sendRequest);

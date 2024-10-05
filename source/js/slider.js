@@ -12,4 +12,14 @@ $(document).ready(function () {
   const slickArrow = $(".services__carousel .slick-arrow");
 
   slickArrow.text("");
+
+  $(".features__list").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 3,
+    variableWidth: true,
+    centerMode: false
+  });
 });

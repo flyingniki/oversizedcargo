@@ -1,0 +1,83 @@
+.range
+  &__wrapper
+    position: relative
+    margin-bottom: 33px
+
+  &__value
+    font-weight: 500
+    line-height: 24px
+    margin: 0
+    margin-bottom: 38px
+
+  &__input
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    width: 100%
+    outline: none
+    height: 2px
+    border-radius: 16px
+    background-color: $range
+
+    @media (min-width: $desktop)
+      width: 340px
+
+
+    &::before,
+    &::after
+      position: absolute
+      bottom: -25px
+      line-height: 24px
+      color: $white
+
+    &::before
+      content: "0"
+      left: 8px
+
+    &--width,
+    &--height
+      &::after
+        content: "10"
+        right: 8px
+
+    &--length
+      &::after
+        content: "50"
+        right: 8px
+
+    &--weight
+      &::after
+        content: "200"
+        right: 8px
+
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      appearance: none
+      width: 14px
+      height: 14px
+      border-radius: 50%
+      background-color: $white
+      cursor: pointer
+
+    &::-moz-range-thumb
+      width: 20px
+      height: 20px
+      border-radius: 10px
+      background: red
+      cursor: pointer
+
+  &__bubble
+    min-width: 34px
+    background: $yellow
+    color: $bubble
+    box-sizing: border-box
+    position: absolute
+    top: 34px
+    border-radius: 8px
+    transform: translateX(-50%)
+    text-align: center
+
+  @media (min-width: $desktop)
+    width: 360px
+    padding: 0 10px
+    box-sizing: border-box

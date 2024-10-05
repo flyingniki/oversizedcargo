@@ -16,16 +16,6 @@
 </head>
 <body class="page__body">
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <symbol id="arrow-left-control--inline" viewBox="0 0 9 16">
-      <g fill="none">
-        <path d="M7.92893 0.928931L1.56497 7.29289C1.17445 7.68341 1.17445 8.31658 1.56497 8.7071L7.92893 15.0711" stroke="#A5A5A5" stroke-width="1.5" stroke-linecap="round"/>
-      </g>
-    </symbol>
-    <symbol id="arrow-right-control--inline" viewBox="0 0 9 16">
-      <g fill="none">
-        <path d="M1.07107 0.928931L7.43503 7.29289C7.82555 7.68341 7.82555 8.31658 7.43503 8.7071L1.07107 15.0711" stroke="#A5A5A5" stroke-width="1.5" stroke-linecap="round"/>
-      </g>
-    </symbol>
     <symbol id="control-left--inline" viewBox="0 0 32 32">
       <g fill="none">
         <circle cx="15" cy="15" r="14.25" transform="matrix(-1 0 0 1 31 1)" stroke="#939393" stroke-width="1.5"/>
@@ -189,30 +179,30 @@
       </section>
       <section class="calculator">
         <h2 class="calculator__header">Узнать стоимость перевозок</h2>
-        <div class="calculator__wrapper">
-          <form class="calculator__form" action="#" method="post">
-            <div class="range calculator__range">
-              <div class="range__wrapper">
-                <p class="range__value">Ширина в метрах</p>
-                <input class="range__input" type="range" name="width" min="0" max="10" step="0.1" value="0">
-                <output class="range__bubble"></output>
-              </div>
-              <div class="range__wrapper">
-                <p class="range__value">Высота в метрах</p>
-                <input class="range__input" type="range" name="height" min="0" max="10" step="0.1" value="0">
-                <output class="range__bubble"></output>
-              </div>
-              <div class="range__wrapper">
-                <p class="range__value">Длина в метрах</p>
-                <input class="range__input" type="range" name="length" min="0" max="50" step="0.1" value="0">
-                <output class="range__bubble"></output>
-              </div>
-              <div class="range__wrapper">
-                <p class="range__value">Вес в тоннах</p>
-                <input class="range__input" type="range" name="weight" min="0" max="200" step="1" value="0">
-                <output class="range__bubble"></output>
-              </div>
+        <form class="calculator__form" action="#" method="post">
+          <div class="range calculator__range">
+            <div class="range__wrapper">
+              <p class="range__value">Ширина в метрах</p>
+              <input class="range__input range__input--width" type="range" name="width" min="0" max="10" step="0.1" value="0">
+              <output class="range__bubble"></output>
             </div>
+            <div class="range__wrapper">
+              <p class="range__value">Высота в метрах</p>
+              <input class="range__input range__input--height" type="range" name="height" min="0" max="10" step="0.1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+            <div class="range__wrapper">
+              <p class="range__value">Длина в метрах</p>
+              <input class="range__input range__input--length" type="range" name="length" min="0" max="50" step="0.1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+            <div class="range__wrapper">
+              <p class="range__value">Вес в тоннах</p>
+              <input class="range__input range__input--weight" type="range" name="weight" min="0" max="200" step="1" value="0">
+              <output class="range__bubble"></output>
+            </div>
+          </div>
+          <div class="calculator__fieldsbox">
             <div class="fieldset calculator__fieldset">
               <ul class="fieldset__list clear-list">
                 <li class="fieldset__item">
@@ -241,59 +231,72 @@
                     placeholder="Информация о грузе">
                 </li>
               </ul>
-              <div class="calculator__send">
-                <div class="policy calculator__policy">
-                  <input class="policy__input visually-hidden" type="checkbox" name="policy_calc" id="policy_calc"
-                  value="agree">
-                  <label class="policy__label" for="policy_calc">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
-                </div>
-                <button class="btn calculator__submit" type="submit"></button>
-              </div>
             </div>
-          </form>
-        </div>
+            <div class="calculator__send">
+              <div class="policy calculator__policy">
+                <input class="policy__input visually-hidden" type="checkbox" name="policy_calc" id="policy_calc"
+                value="agree" checked>
+                <label class="policy__label" for="policy_calc">Соглашаюсь с <span class="policy__span">Правилами обработки<br> персональных данных</span></label>
+              </div>
+              <button class="btn calculator__submit" type="submit">Оставить заявку</button>
+            </div>
+          </div>
+        </form>
       </section>
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="features__list clear-list">
-          <li class="features__item">
-            <p class="features__text"></p>
-          </li>
-          <li class="features__item">
-            <p class="features__text"></p>
-          </li>
-          <li class="features__item">
-            <p class="features__text"></p>
-          </li>
-          <li class="features__item">
-            <p class="features__text"></p>
-          </li>
-        </ul>
+        <div class="features__list">
+          <div class="features__item features__item--route">
+            <p class="features__text">Подбор оптимального маршрута</p>
+          </div>
+          <div class="features__item features__item--insurance">
+            <p class="features__text">Полное страхование грузов</p>
+          </div>
+          <div class="features__item features__item--permit">
+            <p class="features__text">Получение
+              разрешения на
+              негабарит за 1 день</p>
+          </div>
+          <div class="features__item features__item--payment">
+            <p class="features__text">Любая форма
+              оплаты: c НДС, без
+              НДС, нал./безнал.</p>
+          </div>
+        </div>
       </section>
       <section class="car">
-        <div class="slider-header car__slider">
+        <!-- <div class="slider-header car__slider">
           <h2 class="slider-header__title">Наш автопарк</h2>
           <div class="slider-header__controls">
             <button type="button" class="btn slider-header__button"></button>
             <button type="button" class="btn slider-header__button"></button>
           </div>
-        </div>
+        </div> -->
+        <h2 class="car__title">Наш автопарк</h2>
         <div class="car__wrapper">
           <div class="car__image">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 375px)"
-                srcset="./img/index/transport-mobile@1x.webp, ./img/index/transport-mobile@2x.webp 2x">
+                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
               <source media="(min-width: 375px)"
                 srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
-              <img class="car__img" src="./img/index/transport-mobile@1x.png"
-              srcset="./img/index/transport-mobile@2x.png 2x" alt="Faymonville">
+              <img class="car__img" src="./img/index/transport-desktop@1x.png"
+              srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
             </picture>
           </div>
           <div class="car__info">
-            <p class="car__description"></p>
-            <button type="button" class="btn car__order"></button>
+            <p class="car__description">Марка FAYMONVILLE
+              Год выпуска 2010
+              Кол-во осей: 8
+              Собственный вес 37 т
+              Полный вес 159 250 кг
+              Грузоподъёмность 112 750 кг
+              Длина 22,35 м
+              Ширина 2,85 м
+              Высота 5,00 м</p>
+            <button type="button" class="btn car__order">Оставить заявку</button>
           </div>
         </div>
       </section>

@@ -1,0 +1,55 @@
+.features
+  margin-bottom: 32px
+
+  &__item
+    height: 100px
+    box-sizing: border-box
+    padding: 23px 16px
+    background-color: $brown-olive
+    border-radius: 12px
+
+    @media (min-width: $desktop)
+      border-radius: 16px
+
+    &::before
+      position: absolute
+      top: 10px
+      content: ""
+      width: 68px
+      height: 68px
+      background-repeat: no-repeat
+
+    &--route
+      &::before
+        background-image: url('../../img/icons/route.svg')
+
+    &--insurance
+      &::before
+        background-image: url('../../img/icons/insurance.svg')
+
+    &--permit
+      &::before
+        background-image: url('../../img/icons/permit.svg')
+
+    &--payment
+      &::before
+        background-image: url('../../img/icons/payment.svg')
+
+  &__text
+    margin: 0
+    margin-left: 84px
+    font-size: 14px
+
+  & .slick
+    &-slide
+      width: 254px
+      margin-right: 20px
+
+      @media (min-width: $desktop)
+        width: 304px
+
+    &-arrow
+      display: none !important
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px
