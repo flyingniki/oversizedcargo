@@ -1,4 +1,6 @@
 .car
+  margin-bottom: 32px
+
   &__wrapper
     @media (min-width: $desktop)
       display: flex
@@ -14,6 +16,9 @@
       margin-bottom: 37px
 
   &__image
+    @media (max-width: $mobile-only)
+      margin-bottom: 16px
+
     @media (min-width: $desktop)
       margin-right: 20px
 
@@ -44,3 +49,40 @@
   &__info
     position: relative
     width: 100%
+
+  & .slick
+    &-arrow
+      position: absolute
+      top: -38px
+      border: none
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      background-repeat: no-repeat
+      background-color: transparent
+      cursor: pointer
+
+      @media (min-width: $desktop)
+        width: 32px
+        height: 32px
+
+    &-next
+      background-image: url('../../img/icons/control-right-mobile.svg')
+      right: 0
+
+      @media (min-width: $desktop)
+        background-image: url('../../img/icons/control-right-desktop.svg')
+
+    &-prev
+      background-image: url('../../img/icons/control-left-mobile.svg')
+      right: 28px
+
+      @media (min-width: $desktop)
+        background-image: url('../../img/icons/control-left-desktop.svg')
+        right: 39px
+
+  &-slider
+    position: relative
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px

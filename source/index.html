@@ -265,38 +265,63 @@
         </div>
       </section>
       <section class="car">
-        <!-- <div class="slider-header car__slider">
-          <h2 class="slider-header__title">Наш автопарк</h2>
-          <div class="slider-header__controls">
-            <button type="button" class="btn slider-header__button"></button>
-            <button type="button" class="btn slider-header__button"></button>
-          </div>
-        </div> -->
         <h2 class="car__title">Наш автопарк</h2>
-        <div class="car__wrapper">
-          <div class="car__image">
-            <picture>
-              <source type="image/webp" media="(min-width: 1440px)"
-                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 375px)"
-                srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
-              <source media="(min-width: 375px)"
-                srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
-              <img class="car__img" src="./img/index/transport-desktop@1x.png"
-              srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
-            </picture>
+        <div class="car__slider">
+          <div class="car__item">
+            <div class="car__wrapper">
+              <div class="car__image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 375px)"
+                    srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                  <source media="(min-width: 375px)"
+                    srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
+                  <img class="car__img" src="./img/index/transport-desktop@1x.png"
+                  srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
+                </picture>
+              </div>
+              <div class="car__info">
+                <p class="car__description">Марка FAYMONVILLE
+                  Год выпуска 2010
+                  Кол-во осей: 8
+                  Собственный вес 37 т
+                  Полный вес 159 250 кг
+                  Грузоподъёмность 112 750 кг
+                  Длина 22,35 м
+                  Ширина 2,85 м
+                  Высота 5,00 м</p>
+                <button type="button" class="btn car__order">Оставить заявку</button>
+              </div>
+            </div>
           </div>
-          <div class="car__info">
-            <p class="car__description">Марка FAYMONVILLE
-              Год выпуска 2010
-              Кол-во осей: 8
-              Собственный вес 37 т
-              Полный вес 159 250 кг
-              Грузоподъёмность 112 750 кг
-              Длина 22,35 м
-              Ширина 2,85 м
-              Высота 5,00 м</p>
-            <button type="button" class="btn car__order">Оставить заявку</button>
+          <div class="car__item">
+            <div class="car__wrapper">
+              <div class="car__image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 375px)"
+                    srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                  <source media="(min-width: 375px)"
+                    srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
+                  <img class="car__img" src="./img/index/transport-desktop@1x.png"
+                  srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
+                </picture>
+              </div>
+              <div class="car__info">
+                <p class="car__description">Марка FAYMONVILLE
+                  Год выпуска 2010
+                  Кол-во осей: 8
+                  Собственный вес 37 т
+                  Полный вес 159 250 кг
+                  Грузоподъёмность 112 750 кг
+                  Длина 22,35 м
+                  Ширина 2,85 м
+                  Высота 5,00 м</p>
+                <button type="button" class="btn car__order">Оставить заявку</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -304,9 +329,9 @@
         <h2 class="price__title">Стоимость перевозок</h2>
         <div class="price__wrapper">
           <div class="price__item">
-            <div class="price__item-header">До 20 тонн</div>
             <div class="price__item-body">
-              <h3 class="price__item-location">Москва</h3>
+              <h3 class="price__item-header">До 20 тонн</h3>
+              <h4 class="price__item-location">Москва</h4>
               <div class="price__item-info">
                 <p class="price__item-value">От 23 ооо руб</p>
                 <p class="price__item-value">От 23 ооо руб</p>
@@ -315,9 +340,9 @@
             </div>
           </div>
           <div class="price__item">
-            <div class="price__item-header">До 20 тонн</div>
             <div class="price__item-body">
-              <h3 class="price__item-location">Ростов-на-Дону</h3>
+              <h3 class="price__item-header">До 20 тонн</h3>
+              <h4 class="price__item-location">Ростов-на-Дону</h4>
               <div class="price__item-info">
                 <p class="price__item-value">От 23 ооо руб</p>
                 <p class="price__item-value">От 23 ооо руб</p>
@@ -326,9 +351,9 @@
             </div>
           </div>
           <div class="price__item">
-            <div class="price__item-header">До 20 тонн</div>
             <div class="price__item-body">
-              <h3 class="price__item-location">Регионы РФ</h3>
+              <h3 class="price__item-header">До 20 тонн</h3>
+              <h4 class="price__item-location">Регионы РФ</h4>
               <div class="price__item-info">
                 <p class="price__item-value">От 23 ооо руб</p>
                 <p class="price__item-value">От 23 ооо руб</p>
@@ -362,11 +387,11 @@
             <source type="image/webp" media="(min-width: 1440px)"
               srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 375px)"
-              srcset="./img/index/oversized-mobile@1x.webp, ./img/index/oversized-mobile@2x.webp 2x">
+              srcset="./img/index/oversized-desktop@1x.webp, ./img/index/oversized-desktop@2x.webp 2x">
             <source media="(min-width: 375px)"
               srcset="./img/index/oversized-desktop@1x.png, ./img/index/oversized-desktop@2x.png 2x">
-            <img class="oversized__img" src="./img/index/oversized-mobile@1x.png"
-            srcset="./img/index/oversized-mobile@2x.png 2x" alt="Faymonville">
+            <img class="oversized__img" src="./img/index/oversized-desktop@1x.png"
+            srcset="./img/index/oversized-desktop@2x.png 2x" alt="Faymonville">
           </picture>
         </div>
       </section>

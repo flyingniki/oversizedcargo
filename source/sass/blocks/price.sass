@@ -1,0 +1,81 @@
+.price
+  margin-bottom: 32px
+  &__title
+    margin: 0
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      font-size: 32px
+      margin-bottom: 32px
+
+  &__wrapper
+    @media (min-width: $desktop)
+      display: flex
+      column-gap: 20px
+
+  &__item
+    @media (max-width: $mobile-only)
+      margin-bottom: 16px
+
+    &-header
+      position: absolute
+      box-sizing: border-box
+      top: 0
+      left: 0
+      width: 100%
+      margin: 0
+      font-weight: 500
+      font-size: 16px
+      line-height: 130%
+      text-transform: lowercase
+      padding: 8px
+      text-align: center
+      background-color: $dark-gray
+      border-radius: 12px
+
+      @media (min-width: $desktop)
+        font-size: 18px
+
+    &-body
+      position: relative
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 59px 24px 38px
+      background-color: $brown-olive
+      box-sizing: border-box
+      border-radius: 12px
+
+      @media (min-width: $desktop)
+        min-width: 413px
+        padding: 69px 38px 24px
+
+    &-location
+      margin: 0
+      font-weight: 600
+      font-size: 14px
+      line-height: 130%
+
+      @media (min-width: $desktop)
+        font-weight: 500
+        font-size: 18px
+        line-height: 130%
+
+    &-value
+      margin: 0
+      font-weight: 400
+      font-size: 14px
+      line-height: 130%
+
+      &:not(:last-child)
+        margin-bottom: 12px
+
+      @media (min-width: $desktop)
+        font-weight: 400
+        font-size: 16px
+        line-height: 130%
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px

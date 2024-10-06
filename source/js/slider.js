@@ -6,12 +6,8 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 3,
     variableWidth: true,
-    centerMode: true
+    centerMode: true,
   });
-
-  const slickArrow = $(".services__carousel .slick-arrow");
-
-  slickArrow.text("");
 
   $(".features__list").slick({
     dots: false,
@@ -20,6 +16,25 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 3,
     variableWidth: true,
-    centerMode: false
+    centerMode: false,
+  });
+
+  $(".car__slider").slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 2,
+    variableWidth: false,
+    centerMode: false,
+  });
+
+  const slickArrows = [
+    $(".services__carousel .slick-arrow"),
+    $(".car .slick-arrow"),
+  ];
+
+  slickArrows.forEach((arrow) => {
+    arrow.text("");
   });
 });
