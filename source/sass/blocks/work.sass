@@ -1,0 +1,83 @@
+.work
+  &__wrapper
+    position: relative
+
+  &__carousel
+    @media (min-width: $desktop)
+      display: flex
+      justify-content: space-between
+
+  &__box
+    position: relative
+    background-color: $brown-olive
+    box-sizing: border-box
+    border-radius: 12px
+    height: 146px
+
+    @media (min-width: $desktop)
+      width: 197px
+
+  &__title
+    position: absolute
+    top: 0
+    margin: 0
+    padding: 16px
+    color: $light-gray
+    font-size: 12px
+    font-weight: 400
+    line-height: 130%
+
+    &--head
+      position: relative
+      padding: 0
+      margin-bottom: 24px
+      font-weight: 600
+      font-size: 18px
+      text-transform: uppercase
+
+      @media (min-width: $desktop)
+        font-size: 32px
+        margin-bottom: 32px
+
+  &__text
+    position: absolute
+    bottom: 0
+    margin: 0
+    padding: 16px
+    font-size: 12px
+    font-weight: 400
+    line-height: 130%
+
+  &__slide
+    position: relative
+    margin-top: 77px
+
+    @media (min-width: $desktop)
+      width: fit-content
+
+  &__line
+    position: absolute
+    top: 24px
+    left: 0
+    width: 100%
+    height: 1px
+    background-color: $disabled-field
+
+  &__bubble
+    position: absolute
+    display: flex
+    top: -77px
+    left: calc(50% - 24px)
+    width: 48px
+    height: 48px
+    border-radius: 50%
+    background-color: $brown-olive
+    justify-content: center
+    align-items: center
+
+  & .slick
+    &-arrow
+      display: none !important
+
+    &-slide
+      margin-right: 20px
