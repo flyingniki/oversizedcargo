@@ -397,17 +397,19 @@
       </section>
       <section class="consultation">
         <h2 class="consultation__title">Нужна консультация специалиста?</h2>
-        <form class="consultation__form" action="#" method="post">
+        <form class="consultation__wrapper" action="#" method="post">
           <label class="visually-hidden" for="phone_consult"></label>
-          <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
-            placeholder="Телефон*">
-          <button class="btn consultation__submit" type="submit"></button>
+          <div class="consultation__form">
+            <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
+              placeholder="Телефон*">
+            <button class="btn consultation__submit" type="submit">Заказать консультацию</button>
+          </div>
+          <div class="policy consultation__policy">
+            <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
+            value="agree">
+            <label class="policy__label" for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+          </div>
         </form>
-        <div class="policy">
-          <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
-          value="agree">
-          <label class="policy__label" for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
-        </div>
       </section>
       <section class="about">
         <h2 class="about__title">Как мы работаем</h2>
