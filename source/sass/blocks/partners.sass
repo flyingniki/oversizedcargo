@@ -1,0 +1,70 @@
+.partners
+  margin-bottom: 32px
+
+  & .slick
+    &-slide
+      margin-right: 20px
+
+    &-arrow
+      @media (max-width: $mobile-only)
+        display: none !important
+
+    &-dots
+      @media (max-width: $mobile-only)
+        display: none !important
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px
+
+    & .slick
+      &-arrow
+        position: absolute
+        top: -58px
+        border: none
+        width: 32px
+        height: 32px
+        border-radius: 50%
+        background-repeat: no-repeat
+        background-color: transparent
+        cursor: pointer
+
+      &-next
+        right: 0
+        background-image: url('../../img/icons/control-right-desktop.svg')
+
+      &-prev
+        right: 35px
+        background-image: url('../../img/icons/control-left-desktop.svg')
+
+      &-slide
+        margin-right: 20px
+
+      &-dots
+        display: flex
+        justify-content: center
+        column-gap: 8px
+
+      &-button
+        border: none
+        background-color: $disabled
+        border-radius: 50%
+        width: 10px
+        height: 10px
+        padding: 0
+        cursor: pointer
+
+  &__title
+    margin: 0
+    margin-bottom: 21px
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+
+    @media (min-width: $desktop)
+      font-size: 32px
+      margin-bottom: 32px
+
+  &__img
+    display: block
+    width: 100%
+    max-width: 197px

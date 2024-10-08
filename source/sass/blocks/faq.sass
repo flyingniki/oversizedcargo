@@ -1,0 +1,59 @@
+.faq
+  margin-bottom: 32px
+
+  @media (min-width: $desktop)
+    margin-bottom: 80px
+
+  &__item
+    border-bottom: 1px solid $disabled-field
+    padding-bottom: 16px
+    margin-bottom: 30px
+
+    @media (min-width: $desktop)
+      margin-bottom: 22px
+
+  &__title
+    margin: 0
+    font-weight: 500
+    font-size: 18px
+    text-transform: uppercase
+    margin-bottom: 26px
+
+    @media (min-width: $desktop)
+      font-size: 32px
+      margin-bottom: 32px
+
+  &__button
+    position: relative
+    width: 100%
+    border-radius: 0
+    background-color: transparent
+    color: $white
+    font-size: 18px
+    font-weight: 500
+    text-align: left
+
+    &::after
+      position: absolute
+      top: -12px
+      right: 0
+      content: ""
+      width: 48px
+      height: 48px
+      background-image: url('../../img/icons/plus.svg')
+      background-repeat: no-repeat
+
+    &--active
+      &::after
+        background-image: url('../../img/icons/minus.svg')
+
+    @media (min-width: $desktop)
+      font-size: 24px
+
+  &__content
+    margin: 0
+    margin-top: 16px
+    font-size: 14px
+
+    @media (min-width: $desktop)
+      font-size: 16px

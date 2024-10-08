@@ -1,6 +1,9 @@
 .features
   margin-bottom: 32px
 
+  @media (min-width: $desktop)
+    margin-bottom: 80px
+
   &__item
     height: 100px
     box-sizing: border-box
@@ -50,6 +53,3 @@
 
     &-arrow
       display: none !important
-
-  @media (min-width: $desktop)
-    margin-bottom: 80px

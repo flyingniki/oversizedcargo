@@ -11,23 +11,10 @@
   padding: 12px
   margin-bottom: 16px
 
-  &__icons
-
-    &-list
-      display: flex
-      column-gap: 8px
-
-    &-item
-      &:first-child
-        display: none
-
-    &-svg
-      width: 24px
-      height: 24px
-
-      @media (min-width: $desktop)
-        width: 32px
-        height: 32px
+  @media (min-width: $desktop)
+    border-radius: 16px
+    padding: 24px
+    margin-bottom: 24px
 
   &__contacts
     position: absolute
@@ -87,8 +74,3 @@
     @media (min-width: $desktop)
       display: block
       order: 2
-
-  @media (min-width: $desktop)
-    border-radius: 16px
-    padding: 24px
-    margin-bottom: 24px
