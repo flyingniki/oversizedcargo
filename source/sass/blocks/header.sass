@@ -65,12 +65,15 @@
   &__btn
     width: 148px
     height: 40px
-    border: 2px solid $white
     border-radius: 12px
-    background: transparent
-    color: $white
     display: none
 
     @media (min-width: $desktop)
       display: block
       order: 2
+
+  &__icons
+    & .social__item
+      &:first-child
+        @media (min-width: $desktop)
+          display: none

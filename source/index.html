@@ -138,13 +138,13 @@
           </ul>
         </div>
       </div>
-      <button type="button" class="btn header__btn btn--callback">Заказать звонок</button>
+      <button type="button" class="btn header__btn btn--dark">Заказать звонок</button>
     </header>
     <main class="main">
       <section class="services">
         <div class="services__banner">
           <h1 class="services__title">Негабаритные<br> перевозки<br> по России</h1>
-          <button type="button" class="btn services__btn services__btn--request">Оставить заявку</button>
+          <button type="button" class="btn services__btn btn--orange services__btn--request">Оставить заявку</button>
           <p class="services__description">Перевозим нестандартные грузы</p>
         </div>
         <div class="services__carousel">
@@ -163,7 +163,7 @@
             </div>
           </div>
         </div>
-        <button type="button" class="btn services__btn services__btn--all">Все услуги</button>
+        <button type="button" class="btn services__btn btn--blue services__btn--all">Все услуги</button>
       </section>
       <section class="calculator">
         <h2 class="calculator__header">Узнать стоимость перевозок</h2>
@@ -226,7 +226,7 @@
                 value="agree" checked>
                 <label class="policy__label" for="policy_calc">Соглашаюсь с <span class="policy__span">Правилами обработки<br> персональных данных</span></label>
               </div>
-              <button class="btn calculator__submit" type="submit">Оставить заявку</button>
+              <button class="btn calculator__submit btn--orange" type="submit">Оставить заявку</button>
             </div>
           </div>
         </form>
@@ -279,7 +279,7 @@
                   Длина 22,35 м
                   Ширина 2,85 м
                   Высота 5,00 м</p>
-                <button type="button" class="btn car__order">Оставить заявку</button>
+                <button type="button" class="btn car__btn btn--orange">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -307,7 +307,7 @@
                   Длина 22,35 м
                   Ширина 2,85 м
                   Высота 5,00 м</p>
-                <button type="button" class="btn car__order">Оставить заявку</button>
+                <button type="button" class="btn car__btn btn--orange">Оставить заявку</button>
               </div>
             </div>
           </div>
@@ -390,7 +390,7 @@
             <label class="visually-hidden" for="phone_consult"></label>
             <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
               placeholder="Телефон*">
-            <button class="btn consultation__submit" type="submit">Заказать консультацию</button>
+            <button class="btn consultation__submit btn--orange" type="submit">Заказать консультацию</button>
           </div>
           <div class="policy consultation__policy">
             <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
@@ -534,7 +534,7 @@
               <label class="visually-hidden" for="name"></label>
               <input class="discuss__input" type="text" name="name" id="name"
                 placeholder="Имя">
-              <button class="btn discuss__submit" type="submit">Заказать консультацию</button>
+              <button class="btn discuss__submit btn--orange" type="submit">Заказать консультацию</button>
             </div>
             <div class="policy discuss__policy">
               <input class="policy__input visually-hidden" type="checkbox" name="policy_discuss" id="policy_discuss"
@@ -547,13 +547,6 @@
           <p class="discuss__action">Напишите нам в соц.сетях</p>
           <div class="social discuss__icons">
             <ul class="social__list clear-list">
-              <li class="social__item">
-                <a href="#" class="social__link">
-                  <svg class="social__svg">
-                    <use xlink:href="#phone--inline"></use>
-                  </svg>
-                </a>
-              </li>
               <li class="social__item">
                 <a href="#" class="social__link">
                   <svg class="social__svg">
@@ -573,87 +566,93 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="footer__nav">
-        <div class="footer__menu">
-          <h2 class="footer__title">Меню</h2>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="" class="footer__link">Услуги</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Автопарк</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">О нас</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Проекты</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Контакты</a>
-            </li>
-          </ul>
+  </div>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__wrapper">
+        <div class="footer__nav">
+          <div class="footer__menu">
+            <h2 class="footer__title">Меню</h2>
+            <ul class="footer__list clear-list">
+              <li class="footer__item">
+                <a href="" class="footer__link">Услуги</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Автопарк</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Проекты</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h2 class="footer__title">Услуги</h2>
+            <ul class="footer__list clear-list">
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка экскаваторов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка сборных грузов грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="footer__menu">
-          <h2 class="footer__title">Услуги</h2>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="" class="footer__link">Перевозка негабаритных грузов</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Перевозка экскаваторов</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Перевозка негабаритных грузов</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Перевозка сборных грузов грузов</a>
-            </li>
-            <li class="footer__item">
-              <a href="" class="footer__link">Перевозка негабаритных грузов</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__contacts">
-        <div class="footer__col">
-          <a href="tel:+79778731886" class="footer__phone">+7 (977) 873-18-86</a>
-          <a href="tel:+79778731886" class="footer__phone">+7 (977) 873-18-86</a>
-          <button type="button" class="btn footer__btn btn--callback">Заказать звонок</button>
-          <div class="footer__mail">
-            <a class="footer__mail-link" href="mailto:infoinfo@gmail.com">
-              <svg class="footer__mail-svg">
-                <use xlink:href="#mail--inline"></use>
-              </svg>
+        <div class="footer__contacts">
+          <div class="footer__col">
+            <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+            <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+            <button type="button" class="btn footer__btn btn--dark">Заказать звонок</button>
+            <div class="footer__mail">
+              <a class="footer__link" href="mailto:infoinfo@gmail.com">
+                <svg class="footer__mail-svg">
+                  <use xlink:href="#mail--inline"></use>
+                </svg>
+              </a>
               <span class="footer__mail-span">infoinfo@gmail.com</span>
-            </a>
+            </div>
           </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__office">
-            <p class="footer__text">Главный офис</p>
-            <p class="footer__text">Россия, Московская обл., г. Королев, ул. Пионерская, д.14А</p>
-          </div>
-          <div class="footer__social">
-            <p class="footer__text">Наши соцсети</p>
-            <div class="footer__social-icons">
-              <a href="#" class="footer__social-link">
-                <svg class="footer__social-svg">
-                  <use xlink:href="#tg--inline"></use>
-                </svg>
-              </a>
-              <a href="#" class="footer__social-link">
-                <svg class="footer__social-svg">
-                  <use xlink:href="#wa--inline"></use>
-                </svg>
-              </a>
+          <div class="footer__col">
+            <div class="footer__office">
+              <p class="footer__text">Главный офис</p>
+              <p class="footer__text">Россия, Московская обл., г. Королев, ул. Пионерская, д.14А</p>
+            </div>
+            <div class="footer__social">
+              <p class="footer__text">Наши соцсети</p>
+              <div class="social footer__icons">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#tg--inline"></use>
+                  </svg>
+                </a>
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#wa--inline"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  </div>
+      <p class="footer__rights">2024. Все права защищены</p>
+      <a class="footer__back-btn"></a>
+    </div>
+  </footer>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./js/index.min.js" type="module"></script>

@@ -1,0 +1,60 @@
+.btn
+  padding: 0
+  border: none
+  border-radius: 12px
+  font-family: "Inter"
+  font-size: 14px
+  font-weight: 600
+  line-height: 130%
+  cursor: pointer
+
+  &--orange
+    background-color: $orange
+    color: $black-brown
+
+    &:hover
+      background-color: $orange-hover
+
+    &:active
+      background-color: $orange-click
+
+    &:focus-visible
+      border: 1px solid $orange-focused
+
+    &:disabled
+      background-color: $disabled
+      color: $white
+
+  &--dark
+    border: 2px solid $white
+    background-color: transparent
+    color: $white
+
+    &:hover
+      background-color: $dark-gray
+
+    &:active
+      background-color: $black-click
+
+    &:focus-visible
+      border: 1px solid $blue
+
+    &:disabled
+      border: 2px solid $disabled
+      color: $disabled
+
+  &--blue
+    background-color: $blue
+    color: $white
+
+    &:hover
+      background-color: $blue-hover
+
+    &:active
+      background-color: $blue-click
+
+    &:focus-visible
+      border: 1px solid $orange
+
+    &:disabled
+      border: 1px solid $disabled
