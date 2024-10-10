@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   $(".services__carousel-list").slick({
     dots: false,
     infinite: true,
