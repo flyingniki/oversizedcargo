@@ -1,0 +1,13 @@
+.breadcrumbs
+  &__item
+    display: inline
+
+    & +.breadcrumbs__item::before
+      content: " /\00a0"
+
+  &__link
+    text-decoration: none
+    color: $white
+    font-size: 14px
+    font-weight: 500
+    line-height: 130%
