@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Негабаритные перевозки по России</title>
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="./favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body class="page__body">
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="mail--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <path d="M16.0013 29.3332C23.3651 29.3332 29.3346 23.3636 29.3346 15.9998C29.3346 8.63605 23.3651 2.6665 16.0013 2.6665C8.63752 2.6665 2.66797 8.63605 2.66797 15.9998C2.66797 23.3636 8.63752 29.3332 16.0013 29.3332Z" fill="white"/>
+        <rect x="9" y="10" width="14" height="12" fill="#291F1F"/>
+        <path d="M8 12L14.2 16.4286C15.2667 17.1905 16.7333 17.1905 17.8 16.4286L24 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.9661 10.2104H10.2995C9.379 10.2104 8.63281 10.9566 8.63281 11.8771V20.2104C8.63281 21.1309 9.379 21.8771 10.2995 21.8771H21.9661C22.8866 21.8771 23.6328 21.1309 23.6328 20.2104V11.8771C23.6328 10.9566 22.8866 10.2104 21.9661 10.2104Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </symbol>
+    <symbol id="phone--inline" viewBox="0 0 24 24">
+      <g fill="none">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47716 17.5228 2 12 2C6.47716 2 2 6.47716 2 12C2 17.5228 6.47716 22 12 22Z" fill="white"/>
+        <path d="M15.1458 18C10.5089 18 6.75 14.2411 6.75 9.60417C6.75 9.39496 6.75765 9.18755 6.77269 8.98219C6.78995 8.7465 6.79858 8.62866 6.86034 8.52139C6.91149 8.43255 7.00215 8.34829 7.09449 8.30376C7.20598 8.25 7.33602 8.25 7.59609 8.25H9.12213C9.34084 8.25 9.45019 8.25 9.54393 8.28599C9.62673 8.31779 9.70046 8.36943 9.75864 8.43639C9.82451 8.51218 9.86188 8.61495 9.93662 8.82049L10.5683 10.5575C10.6552 10.7967 10.6987 10.9162 10.6913 11.0297C10.6848 11.1297 10.6507 11.226 10.5927 11.3077C10.527 11.4005 10.4179 11.4659 10.1997 11.5969L9.45833 12.0417C10.1094 13.4765 11.273 14.6416 12.7083 15.2917L13.1532 14.5503C13.2841 14.3321 13.3495 14.223 13.4422 14.1573C13.524 14.0993 13.6203 14.0652 13.7203 14.0587C13.8338 14.0513 13.9534 14.0948 14.1925 14.1817L15.9295 14.8134C16.135 14.8881 16.2378 14.9255 16.3136 14.9914C16.3806 15.0495 16.4322 15.1233 16.464 15.2061C16.5 15.2998 16.5 15.4092 16.5 15.6279V17.1539C16.5 17.414 16.5 17.544 16.4462 17.6555C16.4017 17.7479 16.3175 17.8385 16.2286 17.8897C16.1213 17.9514 16.0035 17.96 15.7678 17.9773C15.5624 17.9924 15.355 18 15.1458 18Z" fill="#222222"/>
+        <path d="M16.25 10.0833V8.25M16.25 8.25H14.4167M16.25 8.25L13.5 11" stroke="#222222" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <symbol id="tg--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <path d="M16.0013 29.3332C23.3651 29.3332 29.3346 23.3636 29.3346 15.9998C29.3346 8.63605 23.3651 2.6665 16.0013 2.6665C8.63752 2.6665 2.66797 8.63605 2.66797 15.9998C2.66797 23.3636 8.63752 29.3332 16.0013 29.3332Z" fill="white"/>
+        <path d="M8.2171 15.8842C8.2171 15.8842 14.8838 13.1482 17.1959 12.1848C18.0822 11.7995 21.088 10.5663 21.088 10.5663C21.088 10.5663 22.4753 10.0269 22.3597 11.337C22.3211 11.8766 22.0128 13.7648 21.7046 15.8072C21.2421 18.6974 20.7412 21.8573 20.7412 21.8573C20.7412 21.8573 20.6641 22.7436 20.009 22.8977C19.3539 23.0519 18.2749 22.3583 18.0822 22.2041C17.928 22.0885 15.192 20.3544 14.1901 19.5066C13.9204 19.2754 13.6121 18.813 14.2286 18.2735C15.6159 17.0018 17.2729 15.4218 18.2749 14.4199C18.7373 13.9575 19.1997 12.8785 17.2729 14.1887C14.5369 16.0769 11.8394 17.8496 11.8394 17.8496C11.8394 17.8496 11.2229 18.2349 10.0668 17.8881C8.9107 17.5413 7.56196 17.0789 7.56196 17.0789C7.56196 17.0789 6.63715 16.5008 8.2171 15.8842Z" fill="#222222"/>
+      </g>
+    </symbol>
+    <symbol id="wa--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <rect x="8" y="9.33325" width="16" height="14.6667" fill="#222222"/>
+        <path d="M2.67332 29.3332L4.47599 22.7092C3.28817 20.673 2.66411 18.3572 2.66799 15.9998C2.66799 8.63584 8.63732 2.6665 16.0013 2.6665C23.3653 2.6665 29.3347 8.63584 29.3347 15.9998C29.3347 23.3638 23.3653 29.3332 16.0013 29.3332C13.645 29.337 11.3302 28.7134 9.29465 27.5265L2.67332 29.3332ZM11.1893 9.74384C11.0171 9.75453 10.8489 9.79988 10.6947 9.87717C10.55 9.95908 10.418 10.0615 10.3027 10.1812C10.1427 10.3318 10.052 10.4625 9.95465 10.5892C9.46187 11.2305 9.1968 12.0177 9.20132 12.8265C9.20399 13.4798 9.37465 14.1158 9.64132 14.7105C10.1867 15.9132 11.084 17.1865 12.2693 18.3665C12.5547 18.6505 12.8333 18.9358 13.1333 19.2012C14.6045 20.4965 16.3577 21.4306 18.2533 21.9292L19.012 22.0452C19.2587 22.0585 19.5053 22.0398 19.7533 22.0278C20.1416 22.0078 20.5208 21.9026 20.864 21.7198C21.0853 21.6025 21.1893 21.5438 21.3747 21.4265C21.3747 21.4265 21.432 21.3892 21.5413 21.3065C21.7213 21.1732 21.832 21.0785 21.9813 20.9225C22.092 20.8078 22.188 20.6732 22.2613 20.5198C22.3653 20.3025 22.4693 19.8878 22.512 19.5425C22.544 19.2785 22.5347 19.1345 22.5307 19.0452C22.5253 18.9025 22.4067 18.7545 22.2773 18.6918L21.5013 18.3438C21.5013 18.3438 20.3413 17.8385 19.6333 17.5158C19.5587 17.4833 19.4787 17.4648 19.3973 17.4612C19.3061 17.4518 19.2139 17.4621 19.127 17.4913C19.0401 17.5205 18.9604 17.568 18.8933 17.6305V17.6278C18.8867 17.6278 18.7973 17.7038 17.8333 18.8718C17.778 18.9462 17.7018 19.0024 17.6144 19.0332C17.527 19.0641 17.4324 19.0683 17.3427 19.0452C17.2558 19.0219 17.1707 18.9925 17.088 18.9572C16.9227 18.8878 16.8653 18.8612 16.752 18.8118L16.7453 18.8092C15.9825 18.4761 15.2763 18.0263 14.652 17.4758C14.484 17.3292 14.328 17.1692 14.168 17.0145C13.6434 16.5122 13.1863 15.9439 12.808 15.3238L12.7293 15.1972C12.6728 15.1121 12.6271 15.0202 12.5933 14.9238C12.5427 14.7278 12.6747 14.5705 12.6747 14.5705C12.6747 14.5705 12.9987 14.2158 13.1493 14.0238C13.2748 13.8643 13.3918 13.6983 13.5 13.5265C13.6573 13.2732 13.7067 13.0132 13.624 12.8118C13.2507 11.8998 12.864 10.9918 12.4667 10.0905C12.388 9.91184 12.1547 9.78384 11.9427 9.7585C11.8707 9.7505 11.7987 9.7425 11.7267 9.73717C11.5476 9.72827 11.3682 9.73139 11.1893 9.74384Z" fill="white"/>
+      </g>
+    </symbol>
+  </svg>
+  <div class="page__container">
+    <header class="header page__header">
+      <div class="header__wrapper">
+        <a href="index.html" class="header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg">
+            <img class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
+              height="28">
+          </picture>
+        </a>
+        <nav class="nav nav--closed">
+          <div class="nav__list">
+            <div class="nav__item">
+              <a href="#" class="nav__link nav__link--accordion">Услуги</a>
+            </div>
+            <div class="nav__submenu visually-hidden">
+              <div class="nav__item">
+                <a href="#" class="nav__link">Аренда тралов</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Перевозка спецтехники</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Перевозка техники</a>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link nav__link--accordion">Перевозка промышленного оборудования</a>
+              </div>
+              <div class="nav__submenu visually-hidden nav__submenu--sub">
+                <div class="nav__item">
+                  <a href="#" class="nav__link">Экскаваторы</a>
+                </div>
+                <div class="nav__item">
+                  <a href="#" class="nav__link">Бульдозеры</a>
+                </div>
+                <div class="nav__item">
+                  <a href="#" class="nav__link">Погрузчики</a>
+                </div>
+                <div class="nav__item">
+                  <a href="#" class="nav__link">Грейдеры</a>
+                </div>
+                <div class="nav__item">
+                  <a href="#" class="nav__link">Автокраны</a>
+                </div>
+              </div>
+              <div class="nav__item">
+                <a href="#" class="nav__link">Проектные перевозки грузов</a>
+              </div>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Автопарк</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">О нас</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Проекты</a>
+            </div>
+            <div class="nav__item">
+              <a href="#" class="nav__link">Контакты</a>
+            </div>
+          </div>
+          <button class="btn nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        </nav>
+        <div class="header__contacts">
+          <a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
+          <a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
+          <div class="social header__icons">
+            <ul class="social__list clear-list">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#phone--inline"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#tg--inline"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#wa--inline"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn header__btn btn--dark">Заказать звонок</button>
+      </div>
+      <div class="breadcrumbs header__breadcrumbs">
+        <ul class="breadcrumbs__list clear-list">
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Услуги</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#" class="breadcrumbs__link">Услуги по перевозке экскаваторов</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="page__main">
+      <div class="container">
+        <section class="detail">
+          <h1 class="detail__title">Услуги по перевозке экскаваторов</h1>
+          <p class="detail__text">Таким образом новая модель организационной деятельности играет важную роль в формировании модели
+            развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей
+            деятельности требуют от нас анализа модели развития. </p>
+            <div class="detail__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1440px)"
+                  srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 375px)"
+                  srcset="./img/index/transport-desktop@1x.webp, ./img/index/transport-desktop@2x.webp 2x">
+                <source media="(min-width: 375px)"
+                  srcset="./img/index/transport-desktop@1x.png, ./img/index/transport-desktop@2x.png 2x">
+                <img class="detail__img" src="./img/index/transport-desktop@1x.png"
+                srcset="./img/index/transport-desktop@2x.png 2x" alt="Faymonville">
+              </picture>
+            </div>
+          <p class="detail__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас
+            анализа новых предложений. Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа форм
+            развития. Таким образом постоянный количественный рост и сфера нашей активности позволяет оценить значение дальнейших
+            направлений развития.</p>
+          <p class="detail__text">Таким образом новая модель организационной деятельности играет важную роль в формировании модели
+            развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей
+            деятельности требуют от нас анализа модели развития. Значимость этих проблем настолько очевидна, что дальнейшее
+            развитие различных форм деятельности в значительной степени обуславливает создание существенных финансовых и
+            административных условий.</p>
+          <p class="detail__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от нас
+            анализа новых предложений. Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа форм
+            развития. </p>
+        </section>
+        <section class="consultation consultation--detail">
+          <h2 class="consultation__title">Нужна консультация специалиста?</h2>
+          <form class="consultation__wrapper" action="#" method="post">
+            <div class="consultation__form">
+              <label class="visually-hidden" for="phone_consult"></label>
+              <input class="consultation__input" type="tel" name="phone_consult" id="phone_consult"
+                placeholder="Телефон*">
+              <button class="btn consultation__submit btn--orange" type="submit">Заказать консультацию</button>
+            </div>
+            <div class="policy consultation__policy">
+              <input class="policy__input visually-hidden" type="checkbox" name="policy_consult" id="policy_consult"
+              value="agree">
+              <label class="policy__label" for="policy_consult">Соглашаюсь с <span class="policy__span">Правилами обработки персональных данных</span></label>
+            </div>
+          </form>
+        </section>
+        <section class="organization">
+          <h2 class="organization__title">Организация перевозки</h2>
+          <p class="organization__text">Таким образом новая модель организационной деятельности играет важную роль в формировании
+            модели развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей
+            деятельности требуют от нас анализа модели развития. Значимость этих проблем настолько очевидна, что дальнейшее
+            развитие различных форм деятельности в значительной степени обуславливает создание существенных финансовых и
+            административных условий.</p>
+          <p class="organization__text">Значимость этих проблем настолько очевидна, что рамки и место обучения кадров требуют от
+            нас анализа новых предложений. Разнообразный и богатый опыт консультация с широким активом требуют от нас анализа форм
+            развития. </p>
+          <table class="organization__table">
+            <caption class="organization__caption">Предельно допустимые нагрузки</caption>
+            <tr class="organization__tr">
+              <th class="organization__th">Вид транспорта</th>
+              <th class="organization__th">Значение</th>
+            </tr>
+            <tr class="organization__tr">
+              <td class="organization__td" colspan="2">Автомобиль:</td>
+            </tr>
+            <tr class="organization__tr">
+              <td class="organization__td">двухосный</td>
+              <td class="organization__td">18</td>
+            </tr>
+            <tr class="organization__tr">
+              <td class="organization__td">трехосный</td>
+              <td class="organization__td">25</td>
+            </tr>
+            <tr class="organization__tr">
+              <td class="organization__td">четырехосный</td>
+              <td class="organization__td">32</td>
+            </tr>
+          </table>
+          <h2 class="organization__title">Организация перевозки</h2>
+          <p class="organization__text">Таким образом новая модель организационной деятельности играет важную роль в формировании
+            модели развития. Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей
+            деятельности требуют от нас анализа модели развития. Значимость этих проблем настолько очевидна, что дальнейшее
+            развитие различных форм деятельности в значительной степени обуславливает создание существенных финансовых и
+            административных условий.</p>
+        </section>
+      </div>
+      <section class="special">
+        <h2 class="special__title">Услуги по перевозке спецтехники по России</h2>
+        <div class="special__slider">
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+          <div class="service-item all-services__item">
+            <div class="service-item__image">
+              <img src="./img/services/transport-logistics-concept.png" alt="" class="service-item__img">
+            </div>
+            <div class="service-item__description">
+              <p class="service-item__text">Перевозка карьерной техники специального назначения</p>
+              <p class="service-item__text service-item__text--name">(John Deere и др.)</p>
+              <button class="btn service-item__btn btn--dark">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+    <footer class="footer page__footer">
+      <div class="footer__container">
+        <div class="footer__wrapper">
+          <div class="footer__nav">
+            <div class="footer__menu">
+              <h2 class="footer__title">Меню</h2>
+              <ul class="footer__list clear-list">
+                <li class="footer__item">
+                  <a href="" class="footer__link">Услуги</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Автопарк</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">О нас</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Проекты</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu">
+              <h2 class="footer__title">Услуги</h2>
+              <ul class="footer__list clear-list">
+                <li class="footer__item">
+                  <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Перевозка экскаваторов</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Перевозка сборных грузов грузов</a>
+                </li>
+                <li class="footer__item">
+                  <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__contacts">
+            <div class="footer__col">
+              <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+              <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+              <button type="button" class="btn footer__btn btn--dark">Заказать звонок</button>
+              <div class="footer__mail">
+                <a class="footer__link" href="mailto:infoinfo@gmail.com">
+                  <svg class="footer__mail-svg">
+                    <use xlink:href="#mail--inline"></use>
+                  </svg>
+                </a>
+                <span class="footer__mail-span">infoinfo@gmail.com</span>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__office">
+                <p class="footer__text">Главный офис</p>
+                <p class="footer__text">Россия, Московская обл., г. Королев, ул. Пионерская, д.14А</p>
+              </div>
+              <div class="footer__social">
+                <p class="footer__text">Наши соцсети</p>
+                <div class="social footer__icons">
+                  <a href="#" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="#tg--inline"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                    <svg class="social__svg">
+                      <use xlink:href="#wa--inline"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="footer__rights">2024. Все права защищены</p>
+        <a class="footer__back-btn"></a>
+      </div>
+    </footer>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/index.min.js" type="module"></script>
+  </body>
+  </html>

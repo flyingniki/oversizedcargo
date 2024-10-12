@@ -52,6 +52,17 @@ $(function () {
       centerMode: true,
     });
 
+    // section special
+    $(".special__slider").slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      variableWidth: false,
+      centerMode: false,
+    });
+
     const partnersList = $(".partners__list .slick-dots");
     partnersList.addClass("clear-list");
 
@@ -70,6 +81,17 @@ $(function () {
       variableWidth: false,
       centerMode: true,
     });
+
+    // section special
+    $(".special__slider").slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      variableWidth: false,
+      centerMode: false,
+    });
   } else {
     $(".partners__list").slick({
       dots: false,
@@ -80,6 +102,17 @@ $(function () {
       variableWidth: false,
       centerMode: true,
     });
+
+    // section special
+    $(".special__slider").slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      variableWidth: false,
+      centerMode: false,
+    });
   }
 
   const slickArrows = [
@@ -87,6 +120,7 @@ $(function () {
     $(".car .slick-arrow"),
     $(".work__carousel .slick-arrow"),
     $(".partners__list .slick-arrow"),
+    $(".special__slider .slick-arrow"),
   ];
 
   slickArrows.forEach((arrow) => {
