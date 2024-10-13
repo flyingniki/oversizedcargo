@@ -31,6 +31,18 @@
   &__td
     font-size: 14px
 
+    &--dotted
+      &::before
+        display: inline-block
+        content: ""
+        margin-left: 10px
+        margin-right: 10px
+        width: 4px
+        height: 4px
+        border-radius: 50%
+        background-color: $white
+        vertical-align: middle
+
     @media (min-width: $desktop)
       font-size: 16px
       line-height: 130%
