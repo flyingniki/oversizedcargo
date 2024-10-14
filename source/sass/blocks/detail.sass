@@ -13,6 +13,7 @@
     font-weight: 500
     font-size: 18px
     text-transform: uppercase
+    line-height: 135%
 
     @media (min-width: $desktop)
       font-size: 32px
@@ -25,7 +26,10 @@
     line-height: 130%
 
     @media (min-width: $desktop)
-      font-size: 18px
+      font-size: 16px
+
+  &__span
+    font-weight: 600
 
   &__image
     max-width: 782px
@@ -35,3 +39,31 @@
     display: block
     width: 100%
     border-radius: 16px
+
+  &__list
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      margin-bottom: 32px
+
+  & .slick
+    &-slide
+      margin-left: 20px
+      margin-right: 20px
+
+    &-arrow
+      display: none !important
+
+    &-dots
+      display: flex
+      justify-content: center
+      column-gap: 8px
+
+    &-button
+      border: none
+      background-color: $disabled
+      border-radius: 50%
+      width: 10px
+      height: 10px
+      padding: 0
+      cursor: pointer

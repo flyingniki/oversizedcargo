@@ -115,12 +115,32 @@ $(function () {
     });
   }
 
+  $(".detail__list").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: false,
+    centerMode: false,
+  });
+
+  const detailList = $(".detail__list .slick-dots");
+  detailList.addClass("clear-list");
+
+    const dots = detailList.find("button");
+    dots.each((i, dot) => {
+      dot.textContent = "";
+      dot.classList.add("slick-button");
+    });
+
   const slickArrows = [
     $(".services__carousel .slick-arrow"),
     $(".car .slick-arrow"),
     $(".work__carousel .slick-arrow"),
     $(".partners__list .slick-arrow"),
     $(".special__slider .slick-arrow"),
+    $(".detail__list .slick-arrow"),
   ];
 
   slickArrows.forEach((arrow) => {

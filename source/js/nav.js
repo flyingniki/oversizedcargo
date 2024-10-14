@@ -13,12 +13,12 @@ navToggle.addEventListener("click", () => {
 
 function closeMenu(nav, menu, accordion) {
   nav.classList.add("nav--closed");
-  menu.forEach((menuItem) => {
-    menuItem.classList.add("visually-hidden");
-  });
-  accordion.forEach((accordionItem) => {
-    accordionItem.classList.remove("nav__link--active");
-  });
+  // menu.forEach((menuItem) => {
+  //   menuItem.classList.add("visually-hidden");
+  // });
+  // accordion.forEach((accordionItem) => {
+  //   accordionItem.classList.remove("nav__link--active");
+  // });
 }
 
 document.addEventListener("keydown", (e) => {
@@ -33,14 +33,14 @@ document.addEventListener("click", (e) => {
   }
 });
 
-navAccordions.forEach((navAccordion) => {
-  navAccordion.addEventListener("click", () => {
-    let item = navAccordion.parentElement;
-    let next = item.nextElementSibling;
-    if (next.classList.contains("nav__submenu")) {
-      navAccordion.classList.toggle("nav__link--active");
-      let submenu = next;
-      submenu.classList.toggle("visually-hidden");
-    }
-  });
-});
+// navAccordions.forEach((navAccordion) => {
+//   navAccordion.addEventListener("click", () => {
+//     let item = navAccordion.parentElement;
+//     let next = item.nextElementSibling;
+//     if (next.classList.contains("nav__submenu")) {
+//       navAccordion.classList.toggle("nav__link--active");
+//       let submenu = next;
+//       submenu.classList.toggle("visually-hidden");
+//     }
+//   });
+// });
