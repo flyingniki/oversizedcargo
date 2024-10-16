@@ -1,6 +1,5 @@
 .features
   &__item
-    position: relative
     height: 100px
     box-sizing: border-box
     padding: 23px 16px
@@ -10,13 +9,18 @@
     @media (min-width: $desktop)
       border-radius: 16px
 
+  &__wrapper
+    position: relative
+    display: flex
+    align-items: center
+    height: 100%
+
     &::before
-      position: absolute
-      top: 10px
       content: ""
-      width: 68px
       height: 68px
       background-repeat: no-repeat
+      background-position: center
+      flex-basis: 200px
 
     &--route
       &::before
@@ -36,7 +40,6 @@
 
   &__text
     margin: 0
-    margin-left: 84px
     font-size: 14px
 
   & .slick
