@@ -7,12 +7,20 @@
       display: flex
       justify-content: space-between
 
+  &__slide
+    position: relative
+    margin-top: 77px
+
+    // @media (min-width: $desktop)
+    width: fit-content
+
   &__box
     position: relative
     background-color: $brown-olive
     box-sizing: border-box
     border-radius: 12px
     height: 146px
+    width: 252px
 
     @media (min-width: $desktop)
       width: 197px
@@ -49,13 +57,6 @@
     font-size: 12px
     font-weight: 400
     line-height: 130%
-
-  &__slide
-    position: relative
-    margin-top: 77px
-
-    @media (min-width: $desktop)
-      width: fit-content
 
   &__line
     position: absolute

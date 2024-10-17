@@ -4,9 +4,9 @@ $(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     variableWidth: true,
-    centerMode: true,
+    centerMode: false,
   });
 
   $(".features__list").slick({
@@ -14,7 +14,7 @@ $(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     variableWidth: true,
     centerMode: false,
   });
@@ -24,7 +24,7 @@ $(function () {
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     variableWidth: false,
     centerMode: false,
   });
@@ -34,10 +34,10 @@ $(function () {
       dots: false,
       infinite: true,
       speed: 300,
-      slidesToShow: 1,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      variableWidth: false,
-      centerMode: true,
+      variableWidth: true,
+      centerMode: false,
     });
   }
 
@@ -47,9 +47,9 @@ $(function () {
       infinite: true,
       speed: 300,
       slidesToShow: 6,
-      slidesToScroll: 6,
-      variableWidth: false,
-      centerMode: true,
+      slidesToScroll: 1,
+      variableWidth: true,
+      centerMode: false,
     });
 
     // section special
@@ -58,7 +58,7 @@ $(function () {
       infinite: true,
       speed: 300,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       variableWidth: false,
       centerMode: false,
     });
@@ -76,10 +76,10 @@ $(function () {
       dots: false,
       infinite: true,
       speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      variableWidth: false,
-      centerMode: true,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      variableWidth: true,
+      centerMode: false,
     });
 
     // section special
@@ -88,7 +88,7 @@ $(function () {
       infinite: true,
       speed: 300,
       slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToScroll: 1,
       variableWidth: false,
       centerMode: false,
     });
@@ -99,8 +99,8 @@ $(function () {
       speed: 300,
       slidesToShow: 2,
       slidesToScroll: 1,
-      variableWidth: false,
-      centerMode: true,
+      variableWidth: true,
+      centerMode: false,
     });
 
     // section special
