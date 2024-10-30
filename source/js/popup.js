@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const requestCall = document.querySelectorAll(".call-back");
   const popup = document.querySelector(".popup");
   const success = document.querySelector(".success");
-  const form = document.querySelector(".popup__form");
+  const calculatorForm = document.querySelector(".calculator__form");
+  const consultationForms = document.querySelectorAll(".callback-form");
   const closePopup = document.querySelector(".popup__toggle");
   const closeSuccess = document.querySelector(".success__toggle");
   const okSuccess = document.querySelector(".success__close");
@@ -15,21 +16,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
+  function sendForm(form, success, popup) {
     let formData = new FormData(form);
-    let request = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
 
-    request.open("POST", form.action);
-    request.onreadystatechange = () => {
-      if (request.status == 200) {
+    xhr.open("POST", form.action);
+    xhr.onreadystatechange = () => {
+      if (xhr.status == 200 && xhr.readyState == 4) {
         success.classList.remove("visually-hidden");
         popup.classList.add("visually-hidden");
       }
     };
-    request.send(formData);
+    xhr.send(formData);
+  }
+
+  calculatorForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    sendForm(calculatorForm, success, popup);
+  });
+
+  consultationForms.forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      sendForm(form, success, popup);
+    });
   });
 
   closePopup.addEventListener("click", () => {
