@@ -1,0 +1,78 @@
+.success
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 100%
+  height: 100%
+  z-index: 1
+  background: rgba(0,0,0,0.7)
+
+  &__wrapper
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 16px
+    padding-bottom: 24px
+    box-sizing: border-box
+    background-color: $brown-olive
+    border-radius: 12px
+    max-width: 343px
+
+    @media (min-width: $desktop)
+      padding: 48px
+      padding-top: 57px
+      border-radius: 32px
+      max-width: 460px
+
+  &__svg
+    display: block
+    height: 42px
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      height: 56px
+      margin-bottom: 32px
+
+  &__title
+    text-align: center
+    margin: 0
+    margin-bottom: 16px
+    font-weight: 600
+    font-size: 20px
+    line-height: 130%
+
+    @media (min-width: $desktop)
+      margin-bottom: 32px
+      font-size: 32px
+
+  &__close
+    font-weight: 600
+    font-size: 14px
+    line-height: 130%
+    padding: 13px
+    width: 100%
+
+    @media (min-width: $desktop)
+      font-size: 20px
+      padding: 11px
+
+  &__toggle
+    position: absolute
+    top: 16px
+    right: 16px
+    width: 32px
+    height: 32px
+    border-radius: 50%
+    background-image: url('../../img/icons/nav-close.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-color: transparent
+    cursor: pointer
+    border: none
+    z-index: 2
+
+    @media (min-width: $desktop)
+      top: 32px
+      right: 32px
