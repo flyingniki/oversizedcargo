@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const servicesRequest = document.querySelector(".services__btn--request");
-  const carRequest = document.querySelector(".car__btn");
+  const requestCall = document.querySelectorAll(".call-back");
   const popup = document.querySelector(".popup");
   const success = document.querySelector(".success");
   const form = document.querySelector(".popup__form");
@@ -8,15 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeSuccess = document.querySelector(".success__toggle");
   const okSuccess = document.querySelector(".success__close");
 
-  if (servicesRequest && carRequest) {
-    servicesRequest.addEventListener("click", () => {
-      popup.classList.remove("visually-hidden");
-    });
-
-    carRequest.addEventListener("click", () => {
-      popup.classList.remove("visually-hidden");
-    });
-  }
+  requestCall.forEach((item) => {
+    if (item) {
+      item.addEventListener("click", () => {
+        popup.classList.remove("visually-hidden");
+      });
+    }
+  });
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
