@@ -30,6 +30,20 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.send(formData);
   }
 
+  function checkBox(form) {
+    let checkBox = form.querySelector(".policy__input");
+    let submit = form.querySelector('button[type="submit"]');
+    checkBox.addEventListener("input", () => {
+      if (!checkBox.checked) {
+        submit.disabled = true;
+      } else {
+        submit.disabled = false;
+      }
+    });
+  }
+
+  checkBox(calculatorForm);
+
   calculatorForm.addEventListener("submit", (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -37,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   consultationForms.forEach((form) => {
+    checkBox(form);
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       e.stopPropagation();
