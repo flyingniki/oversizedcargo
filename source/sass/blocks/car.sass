@@ -16,14 +16,14 @@
       margin-bottom: 37px
 
   &__image
-    margin: 0 auto
     max-width: 847px
-    max-height: 474px
+    height: 190px
 
     @media (max-width: $mobile-only)
       margin-bottom: 16px
 
     @media (min-width: $desktop)
+      height: 474px
       margin-right: 20px
 
   &__img
@@ -53,11 +53,12 @@
 
     @media (min-width: $desktop)
       position: absolute
+      margin-bottom: 0
       bottom: 0
 
   &__info
     position: relative
-    width: 100%
+    flex-grow: 1
 
   & .slick
     &-arrow
