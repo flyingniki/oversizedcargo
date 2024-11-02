@@ -10,9 +10,19 @@
   @media (min-width: $desktop)
     max-width: 412px
 
+  &__image
+    width: 343px
+    height: 191px
+
+    @media (min-width: $desktop)
+      width: 412px
+      height: 230px
+
   &__img
     display: block
     width: 100%
+    height: 100%
+    object-fit: cover
     border-radius: 12px
 
   &__text

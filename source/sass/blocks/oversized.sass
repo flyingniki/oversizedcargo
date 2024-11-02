@@ -6,10 +6,21 @@
     display: flex
     border-radius: 21px
 
+  &__image
+    margin: 0 auto
+    width: 343px
+    height: 367px
+
+    @media (min-width: $desktop)
+      width: 629px
+      height: 591px
+
   &__img
     display: block
     width: 100%
+    height: 100%
     border-radius: 16px
+    object-fit: cover
 
     @media (min-width: $desktop)
       width: 629px

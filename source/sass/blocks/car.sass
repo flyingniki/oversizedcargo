@@ -16,6 +16,10 @@
       margin-bottom: 37px
 
   &__image
+    margin: 0 auto
+    max-width: 847px
+    max-height: 474px
+
     @media (max-width: $mobile-only)
       margin-bottom: 16px
 
@@ -23,8 +27,11 @@
       margin-right: 20px
 
   &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
     @media (max-width: $mobile-only)
-      width: 100%
       border-radius: 12px
 
     @media (min-width: $desktop)
