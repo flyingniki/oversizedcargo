@@ -1,4 +1,7 @@
 $(function () {
+  $(
+    ".services__carousel-list, .features__list, .car__slider, .work__carousel, .partners__list, .special__slider, .detail__list"
+  ).css({ visibility: "visible" });
   $(".services__carousel-list").slick({
     dots: false,
     infinite: true,
@@ -128,11 +131,11 @@ $(function () {
   const detailList = $(".detail__list .slick-dots");
   detailList.addClass("clear-list");
 
-    const dots = detailList.find("button");
-    dots.each((i, dot) => {
-      dot.textContent = "";
-      dot.classList.add("slick-button");
-    });
+  const dots = detailList.find("button");
+  dots.each((i, dot) => {
+    dot.textContent = "";
+    dot.classList.add("slick-button");
+  });
 
   const slickArrows = [
     $(".services__carousel .slick-arrow"),
