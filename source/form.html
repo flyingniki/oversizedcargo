@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Негабаритные перевозки по России</title>
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="./favicon.ico"> <!-- 32×32 -->
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png"> <!-- 180×180 -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+<body class="page__body">
+  <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol id="mail--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <path d="M16.0013 29.3332C23.3651 29.3332 29.3346 23.3636 29.3346 15.9998C29.3346 8.63605 23.3651 2.6665 16.0013 2.6665C8.63752 2.6665 2.66797 8.63605 2.66797 15.9998C2.66797 23.3636 8.63752 29.3332 16.0013 29.3332Z" fill="white"/>
+        <rect x="9" y="10" width="14" height="12" fill="#291F1F"/>
+        <path d="M8 12L14.2 16.4286C15.2667 17.1905 16.7333 17.1905 17.8 16.4286L24 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21.9661 10.2104H10.2995C9.379 10.2104 8.63281 10.9566 8.63281 11.8771V20.2104C8.63281 21.1309 9.379 21.8771 10.2995 21.8771H21.9661C22.8866 21.8771 23.6328 21.1309 23.6328 20.2104V11.8771C23.6328 10.9566 22.8866 10.2104 21.9661 10.2104Z" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </g>
+    </symbol>
+    <symbol id="phone--inline" viewBox="0 0 24 24">
+      <g fill="none">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47716 17.5228 2 12 2C6.47716 2 2 6.47716 2 12C2 17.5228 6.47716 22 12 22Z" fill="white"/>
+        <path d="M15.1458 18C10.5089 18 6.75 14.2411 6.75 9.60417C6.75 9.39496 6.75765 9.18755 6.77269 8.98219C6.78995 8.7465 6.79858 8.62866 6.86034 8.52139C6.91149 8.43255 7.00215 8.34829 7.09449 8.30376C7.20598 8.25 7.33602 8.25 7.59609 8.25H9.12213C9.34084 8.25 9.45019 8.25 9.54393 8.28599C9.62673 8.31779 9.70046 8.36943 9.75864 8.43639C9.82451 8.51218 9.86188 8.61495 9.93662 8.82049L10.5683 10.5575C10.6552 10.7967 10.6987 10.9162 10.6913 11.0297C10.6848 11.1297 10.6507 11.226 10.5927 11.3077C10.527 11.4005 10.4179 11.4659 10.1997 11.5969L9.45833 12.0417C10.1094 13.4765 11.273 14.6416 12.7083 15.2917L13.1532 14.5503C13.2841 14.3321 13.3495 14.223 13.4422 14.1573C13.524 14.0993 13.6203 14.0652 13.7203 14.0587C13.8338 14.0513 13.9534 14.0948 14.1925 14.1817L15.9295 14.8134C16.135 14.8881 16.2378 14.9255 16.3136 14.9914C16.3806 15.0495 16.4322 15.1233 16.464 15.2061C16.5 15.2998 16.5 15.4092 16.5 15.6279V17.1539C16.5 17.414 16.5 17.544 16.4462 17.6555C16.4017 17.7479 16.3175 17.8385 16.2286 17.8897C16.1213 17.9514 16.0035 17.96 15.7678 17.9773C15.5624 17.9924 15.355 18 15.1458 18Z" fill="#222222"/>
+        <path d="M16.25 10.0833V8.25M16.25 8.25H14.4167M16.25 8.25L13.5 11" stroke="#222222" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <symbol id="success--inline" viewBox="0 0 43 42">
+      <g fill="none">
+        <path d="M21.5 0C27.0695 0 32.411 2.21249 36.3492 6.15076C40.2875 10.089 42.5 15.4305 42.5 21C42.5 26.5695 40.2875 31.911 36.3492 35.8492C32.411 39.7875 27.0695 42 21.5 42C15.9305 42 10.589 39.7875 6.65076 35.8492C2.71249 31.911 0.5 26.5695 0.5 21C0.5 15.4305 2.71249 10.089 6.65076 6.15076C10.589 2.21249 15.9305 0 21.5 0ZM18.884 25.143L14.219 20.475C14.0518 20.3078 13.8532 20.1751 13.6347 20.0846C13.4162 19.9941 13.182 19.9475 12.9455 19.9475C12.709 19.9475 12.4748 19.9941 12.2563 20.0846C12.0378 20.1751 11.8392 20.3078 11.672 20.475C11.3342 20.8128 11.1445 21.2708 11.1445 21.7485C11.1445 22.2262 11.3342 22.6842 11.672 23.022L17.612 28.962C17.7788 29.1301 17.9772 29.2635 18.1957 29.3545C18.4143 29.4456 18.6487 29.4924 18.8855 29.4924C19.1223 29.4924 19.3567 29.4456 19.5753 29.3545C19.7938 29.2635 19.9922 29.1301 20.159 28.962L32.459 16.659C32.6285 16.4925 32.7633 16.294 32.8557 16.0751C32.9481 15.8562 32.9962 15.6211 32.9973 15.3835C32.9984 15.1459 32.9525 14.9105 32.8621 14.6907C32.7718 14.4709 32.6388 14.2712 32.4709 14.1031C32.303 13.935 32.1034 13.8018 31.8838 13.7112C31.6641 13.6206 31.4287 13.5744 31.1911 13.5752C30.9535 13.576 30.7184 13.6239 30.4994 13.716C30.2804 13.8081 30.0817 13.9427 29.915 14.112L18.884 25.143Z" fill="white"/>
+      </g>
+    </symbol>
+    <symbol id="tg--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <path d="M16.0013 29.3332C23.3651 29.3332 29.3346 23.3636 29.3346 15.9998C29.3346 8.63605 23.3651 2.6665 16.0013 2.6665C8.63752 2.6665 2.66797 8.63605 2.66797 15.9998C2.66797 23.3636 8.63752 29.3332 16.0013 29.3332Z" fill="white"/>
+        <path d="M8.2171 15.8842C8.2171 15.8842 14.8838 13.1482 17.1959 12.1848C18.0822 11.7995 21.088 10.5663 21.088 10.5663C21.088 10.5663 22.4753 10.0269 22.3597 11.337C22.3211 11.8766 22.0128 13.7648 21.7046 15.8072C21.2421 18.6974 20.7412 21.8573 20.7412 21.8573C20.7412 21.8573 20.6641 22.7436 20.009 22.8977C19.3539 23.0519 18.2749 22.3583 18.0822 22.2041C17.928 22.0885 15.192 20.3544 14.1901 19.5066C13.9204 19.2754 13.6121 18.813 14.2286 18.2735C15.6159 17.0018 17.2729 15.4218 18.2749 14.4199C18.7373 13.9575 19.1997 12.8785 17.2729 14.1887C14.5369 16.0769 11.8394 17.8496 11.8394 17.8496C11.8394 17.8496 11.2229 18.2349 10.0668 17.8881C8.9107 17.5413 7.56196 17.0789 7.56196 17.0789C7.56196 17.0789 6.63715 16.5008 8.2171 15.8842Z" fill="#222222"/>
+      </g>
+    </symbol>
+    <symbol id="wa--inline" viewBox="0 0 32 32">
+      <g fill="none">
+        <rect x="8" y="9.33325" width="16" height="14.6667" fill="#222222"/>
+        <path d="M2.67332 29.3332L4.47599 22.7092C3.28817 20.673 2.66411 18.3572 2.66799 15.9998C2.66799 8.63584 8.63732 2.6665 16.0013 2.6665C23.3653 2.6665 29.3347 8.63584 29.3347 15.9998C29.3347 23.3638 23.3653 29.3332 16.0013 29.3332C13.645 29.337 11.3302 28.7134 9.29465 27.5265L2.67332 29.3332ZM11.1893 9.74384C11.0171 9.75453 10.8489 9.79988 10.6947 9.87717C10.55 9.95908 10.418 10.0615 10.3027 10.1812C10.1427 10.3318 10.052 10.4625 9.95465 10.5892C9.46187 11.2305 9.1968 12.0177 9.20132 12.8265C9.20399 13.4798 9.37465 14.1158 9.64132 14.7105C10.1867 15.9132 11.084 17.1865 12.2693 18.3665C12.5547 18.6505 12.8333 18.9358 13.1333 19.2012C14.6045 20.4965 16.3577 21.4306 18.2533 21.9292L19.012 22.0452C19.2587 22.0585 19.5053 22.0398 19.7533 22.0278C20.1416 22.0078 20.5208 21.9026 20.864 21.7198C21.0853 21.6025 21.1893 21.5438 21.3747 21.4265C21.3747 21.4265 21.432 21.3892 21.5413 21.3065C21.7213 21.1732 21.832 21.0785 21.9813 20.9225C22.092 20.8078 22.188 20.6732 22.2613 20.5198C22.3653 20.3025 22.4693 19.8878 22.512 19.5425C22.544 19.2785 22.5347 19.1345 22.5307 19.0452C22.5253 18.9025 22.4067 18.7545 22.2773 18.6918L21.5013 18.3438C21.5013 18.3438 20.3413 17.8385 19.6333 17.5158C19.5587 17.4833 19.4787 17.4648 19.3973 17.4612C19.3061 17.4518 19.2139 17.4621 19.127 17.4913C19.0401 17.5205 18.9604 17.568 18.8933 17.6305V17.6278C18.8867 17.6278 18.7973 17.7038 17.8333 18.8718C17.778 18.9462 17.7018 19.0024 17.6144 19.0332C17.527 19.0641 17.4324 19.0683 17.3427 19.0452C17.2558 19.0219 17.1707 18.9925 17.088 18.9572C16.9227 18.8878 16.8653 18.8612 16.752 18.8118L16.7453 18.8092C15.9825 18.4761 15.2763 18.0263 14.652 17.4758C14.484 17.3292 14.328 17.1692 14.168 17.0145C13.6434 16.5122 13.1863 15.9439 12.808 15.3238L12.7293 15.1972C12.6728 15.1121 12.6271 15.0202 12.5933 14.9238C12.5427 14.7278 12.6747 14.5705 12.6747 14.5705C12.6747 14.5705 12.9987 14.2158 13.1493 14.0238C13.2748 13.8643 13.3918 13.6983 13.5 13.5265C13.6573 13.2732 13.7067 13.0132 13.624 12.8118C13.2507 11.8998 12.864 10.9918 12.4667 10.0905C12.388 9.91184 12.1547 9.78384 11.9427 9.7585C11.8707 9.7505 11.7987 9.7425 11.7267 9.73717C11.5476 9.72827 11.3682 9.73139 11.1893 9.74384Z" fill="white"/>
+      </g>
+    </symbol>
+  </svg>
+  <div class="page__container">
+    <header class="header page__header">
+      <div class="header__wrapper">
+        <a href="./index.html" class="header__logo">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="./img/desktop-logo.svg">
+            <img class="header__logo-img" src="./img/mobile-logo.svg" alt="Логотип" width="56"
+              height="28">
+          </picture>
+        </a>
+        <nav class="nav nav--closed">
+          <div class="nav__list">
+            <div class="nav__item">
+              <a href="./services.html" class="nav__link">Услуги</a>
+            </div>
+            <div class="nav__item">
+              <a href="./carpark.html" class="nav__link">Автопарк</a>
+            </div>
+            <div class="nav__item">
+              <a href="./about.html" class="nav__link">О нас</a>
+            </div>
+            <div class="nav__item">
+              <a href="./projects.html" class="nav__link">Проекты</a>
+            </div>
+            <div class="nav__item">
+              <a href="./contacts.html" class="nav__link">Контакты</a>
+            </div>
+          </div>
+          <button class="btn nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
+        </nav>
+        <div class="header__contacts">
+          <a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
+          <a href="tel:+79778731886" class="header__phone">+7 (977) 873-18-86</a>
+          <div class="social header__icons">
+            <ul class="social__list clear-list">
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#phone--inline"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#tg--inline"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#wa--inline"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn header__btn btn--dark call-back">Заказать звонок</button>
+      </div>
+    </header>
+    <main class="page__main">
+      <section class="form">
+        <h1 class="form__title">Форма создания сущности</h1>
+        <form class="form__body" action="#" method="post" enctype="multipart/form-data">
+          <div class="form__wrapper">
+            <label class="visually-hidden" for="brand"></label>
+            <input class="form__input" type="text" name="brand" id="brand" placeholder="Марка">
+
+            <label class="visually-hidden" for="year"></label>
+            <input class="form__input" type="text" name="year" id="year" placeholder="Год выпуска">
+
+            <label class="visually-hidden" for="axles"></label>
+            <input class="form__input" type="text" name="axles" id="axles" placeholder="Кол-во осей">
+
+            <label class="visually-hidden" for="own_weight"></label>
+            <input class="form__input" type="text" name="own_weight" id="own_weight" placeholder="Собственный вес">
+
+            <label class="visually-hidden" for="full_weight"></label>
+            <input class="form__input" type="text" name="full_weight" id="full_weight" placeholder="Полный вес">
+
+            <label class="visually-hidden" for="load_capacity"></label>
+            <input class="form__input" type="text" name="load_capacity" id="load_capacity" placeholder="Грузоподъемность">
+
+            <label class="visually-hidden" for="length"></label>
+            <input class="form__input" type="text" name="length" id="length" placeholder="Длина">
+
+            <label class="visually-hidden" for="width"></label>
+            <input class="form__input" type="text" name="width" id="width" placeholder="Ширина">
+
+            <label class="visually-hidden" for="height"></label>
+            <input class="form__input" type="text" name="height" id="height" placeholder="Высота">
+
+            <label class="visually-hidden" for="preview_img"></label>
+            <input class="form__input" type="file" name="preview_img" id="preview_img" placeholder="Картинка превью">
+
+            <label class="visually-hidden" for="img"></label>
+            <input class="form__input" type="file" name="img" id="img" placeholder="Картинка">
+          </div>
+          <button class="btn form__submit btn--orange" type="submit">Создать</button>
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer class="footer page__footer">
+    <section class="popup visually-hidden">
+      <div class="popup__wrapper">
+        <h2 class="popup__title">Заказать звонок</h2>
+        <form class="popup__form" action="#" method="post">
+          <div class="popup__fields">
+            <label class="visually-hidden" for="phone_popup"></label>
+            <input class="popup__input" type="tel" name="phone_popup" id="phone_popup"
+              placeholder="Телефон*">
+            <label class="visually-hidden" for="name"></label>
+            <input class="popup__input" type="text" name="name" id="name"
+              placeholder="Имя">
+            <button class="btn popup__submit btn--orange" type="submit">Оставить заявку</button>
+          </div>
+          <div class="policy popup__policy">
+            <input class="policy__input visually-hidden" type="checkbox" name="policy_popup" id="policy_popup"
+            value="agree">
+            <label class="policy__label" for="policy_popup">Соглашаюсь с <a href="#" class="policy__link"><span class="policy__span">Правилами обработки персональных данных</span></a></label>
+          </div>
+        </form>
+        <button class="btn popup__toggle"><span class="visually-hidden">Закрыть форму</span></button>
+      </div>
+    </section>
+    <section class="success visually-hidden">
+      <div class="success__wrapper">
+        <div class="success__img">
+          <svg class="success__svg">
+            <use xlink:href="#success--inline"></use>
+          </svg>
+        </div>
+        <h2 class="success__title">Заявка принята</h2>
+        <button class="btn success__close btn--orange" type="button">Ок</button>
+        <button class="btn success__toggle"><span class="visually-hidden">Закрыть форму</span></button>
+      </div>
+    </section>
+    <div class="footer__container">
+      <div class="footer__wrapper">
+        <div class="footer__nav">
+          <div class="footer__menu">
+            <h2 class="footer__title">Меню</h2>
+            <ul class="footer__list clear-list">
+              <li class="footer__item">
+                <a href="./services.html" class="footer__link">Услуги</a>
+              </li>
+              <li class="footer__item">
+                <a href="./carpark.html" class="footer__link">Автопарк</a>
+              </li>
+              <li class="footer__item">
+                <a href="./about.html" class="footer__link">О нас</a>
+              </li>
+              <li class="footer__item">
+                <a href="./projects.html" class="footer__link">Проекты</a>
+              </li>
+              <li class="footer__item">
+                <a href="./contacts.html" class="footer__link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__menu">
+            <h2 class="footer__title">Услуги</h2>
+            <ul class="footer__list clear-list">
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка экскаваторов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка сборных грузов грузов</a>
+              </li>
+              <li class="footer__item">
+                <a href="" class="footer__link">Перевозка негабаритных грузов</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__contacts">
+          <div class="footer__col">
+            <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+            <a href="tel:+79778731886" class="footer__link footer__link--phone">+7 (977) 873-18-86</a>
+            <button type="button" class="btn footer__btn btn--dark call-back">Заказать звонок</button>
+            <div class="footer__mail">
+              <a class="footer__link" href="mailto:infoinfo@gmail.com">
+                <svg class="footer__mail-svg">
+                  <use xlink:href="#mail--inline"></use>
+                </svg>
+              </a>
+              <span class="footer__mail-span">infoinfo@gmail.com</span>
+            </div>
+          </div>
+          <div class="footer__col">
+            <div class="footer__office">
+              <p class="footer__text">Главный офис</p>
+              <p class="footer__text">Россия, Московская обл., г. Королев, ул. Пионерская, д.14А</p>
+            </div>
+            <div class="footer__social">
+              <p class="footer__text">Наши соцсети</p>
+              <div class="social footer__icons">
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#tg--inline"></use>
+                  </svg>
+                </a>
+                <a href="#" class="social__link">
+                  <svg class="social__svg">
+                    <use xlink:href="#wa--inline"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__rights">2024. Все права защищены</p>
+      <a class="footer__back-btn"></a>
+    </div>
+  </footer>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/index.min.js" type="module"></script>
+</body>
+</html>
