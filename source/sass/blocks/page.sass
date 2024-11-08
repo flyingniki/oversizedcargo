@@ -22,7 +22,10 @@
       padding-top: 24px
 
   &__header
-    margin-bottom: 32px
+    margin-bottom: 16px
+
+    @media (min-width: $desktop)
+      margin-bottom: 32px
 
   &__main
     & .services,
@@ -56,3 +59,9 @@
 
       @media (min-width: $desktop)
         margin-bottom: 84px
+
+    & .breadcrumbs
+      margin-bottom: 16px
+
+      @media (min-width: $desktop)
+        margin-bottom: 32px
