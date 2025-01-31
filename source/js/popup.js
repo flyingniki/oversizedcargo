@@ -42,22 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  checkBox(calculatorForm);
-
-  calculatorForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    sendForm(calculatorForm, success, popup);
-  });
-
-  consultationForms.forEach((form) => {
-    checkBox(form);
-    form.addEventListener("submit", (e) => {
+  if (calculatorForm) {
+    checkBox(calculatorForm);
+    calculatorForm.addEventListener("submit", (e) => {
       e.preventDefault();
       e.stopPropagation();
-      sendForm(form, success, popup);
+      sendForm(calculatorForm, success, popup);
     });
-  });
+  }
+
+  if (consultationForms) {
+    consultationForms.forEach((form) => {
+      checkBox(form);
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        sendForm(form, success, popup);
+      });
+    });
+  }
 
   closePopup.addEventListener("click", () => {
     popup.classList.add("visually-hidden");
